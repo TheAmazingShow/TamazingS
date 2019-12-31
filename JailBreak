@@ -1,0 +1,3041 @@
+if game.PlaceId ~= 606849621 then return end
+
+pcall(function()
+    local mt = getrawmetatable(game)
+    make_writeable(mt)
+    
+    local old = mt.__index
+    mt.__index = function(self, i)
+        if i == "Velocity" and tostring(self) == "HumanoidRootPart" then
+            return Vector3.new()
+        elseif i == "WalkSpeed" then
+            return 16
+        elseif i == "JumpPower" then
+            return 50
+        end
+        return old(self, i)
+    end
+end)
+
+game:GetService('Workspace').Banks:GetChildren()[1].Name="Bank"
+game:GetService('Workspace').Jewelrys:GetChildren()[1].Name="Jewelry"
+game:GetService('Workspace').SmallStores:GetChildren()[1].Name="Gas"
+game:GetService('Workspace').SmallStores:GetChildren()[2].Name="Donut"
+
+ -- Objects
+ 
+local Main = Instance.new("ScreenGui")
+local MainGui = Instance.new("Frame")
+local GlobalA = Instance.new("Frame")
+local Numbers = Instance.new("TextBox")
+local WalkSpeed = Instance.new("TextButton")
+local GlobalB = Instance.new("Frame")
+local InfAmmo = Instance.new("TextButton")
+local JumpPower = Instance.new("TextButton")
+local GlobalC = Instance.new("Frame")
+local Leave = Instance.new("TextButton")
+local Active = Instance.new("TextButton")
+local Or = Instance.new("TextLabel")
+local Disable = Instance.new("TextButton")
+local ClickTp = Instance.new("TextButton")
+local Teleport = Instance.new("TextButton")
+local Created = Instance.new("TextLabel")
+local Version = Instance.new("TextLabel")
+local Place = Instance.new("TextButton")
+local Credits = Instance.new("TextButton")
+local CreditsGui = Instance.new("Frame")
+local GlobalD = Instance.new("Frame")
+local Away = Instance.new("TextButton")
+local Text = Instance.new("TextLabel")
+local PlaceTeleport = Instance.new("Frame")
+local GlobalE = Instance.new("Frame")
+local BankOutside = Instance.new("TextButton")
+local GlobalF = Instance.new("Frame")
+local Donut = Instance.new("TextButton")
+local PoliceStation1 = Instance.new("TextButton")
+local Gas = Instance.new("TextButton")
+local PoliceStation2 = Instance.new("TextButton")
+local CriminalBase1 = Instance.new("TextButton")
+local CriminalBase2 = Instance.new("TextButton")
+local BankInside = Instance.new("TextButton")
+local JewelryOutside = Instance.new("TextButton")
+local JewelryInside = Instance.new("TextButton")
+local Need = Instance.new("TextButton")
+local Made = Instance.new("TextLabel")
+local Pelo = Instance.new("TextLabel")
+local Store = Instance.new("TextButton")
+local JailbreakStacks = Instance.new("TextLabel")
+local Color = Instance.new("TextLabel")
+local TeleportTo = Instance.new("TextButton")
+local CarsTeleport = Instance.new("Frame")
+local GlobalG = Instance.new("Frame")
+local Camaro = Instance.new("TextButton")
+local GlobalH = Instance.new("Frame")
+local Mustang = Instance.new("TextButton")
+local ATV = Instance.new("TextButton")
+local DirtBike = Instance.new("TextButton")
+local Heli = Instance.new("TextButton")
+local Lamborghini = Instance.new("TextButton")
+local Monster = Instance.new("TextButton")
+local Volt = Instance.new("TextButton")
+local GetOut = Instance.new("TextButton")
+local AAA = Instance.new("TextLabel")
+local Cars = Instance.new("TextButton")
+local Bugatti = Instance.new("TextButton")
+local SUV = Instance.new("TextButton")
+local Jail = Instance.new("TextButton")
+local FeaturesGui = Instance.new("Frame")
+local GlobalI = Instance.new("Frame")
+local Nitro = Instance.new("TextButton")
+local GlobalJ = Instance.new("Frame")
+local Doors = Instance.new("TextButton")
+local gdfgdfg = Instance.new("TextLabel")
+local Kms = Instance.new("TextButton")
+local Features = Instance.new("TextButton")
+local Lasers = Instance.new("TextButton")
+local GlobalL = Instance.new("Frame")
+local HELP = Instance.new("TextButton")
+local Activee = Instance.new("TextButton")
+local yu756uytju = Instance.new("TextLabel")
+local Disablee = Instance.new("TextButton")
+local asdy45y = Instance.new("TextLabel")
+local _87u6thrj76 = Instance.new("TextLabel")
+local McLaren = Instance.new("TextButton")
+local Model3 = Instance.new("TextButton")
+local Stories = Instance.new("TextButton")
+local Bank = Instance.new("TextLabel")
+local Train = Instance.new("TextLabel")
+local Jewerly = Instance.new("TextLabel")
+local Goto = Instance.new("TextButton")
+local Bounty = Instance.new("TextLabel")
+local Username = Instance.new("TextLabel")
+local MoreVehicles = Instance.new("TextButton")
+local MoreCarsGui = Instance.new("Frame")
+local GlobalZ = Instance.new("Frame")
+local Porsche = Instance.new("TextButton")
+local GlobalY = Instance.new("Frame")
+local Pickup = Instance.new("TextButton")
+local ComingSoon1 = Instance.new("TextButton")
+local ComingSoon4 = Instance.new("TextButton")
+local Ufo = Instance.new("TextButton")
+local MiniCooper = Instance.new("TextButton")
+local ComingSoon5 = Instance.new("TextButton")
+local ComingSoon6 = Instance.new("TextButton")
+local MyLife = Instance.new("TextButton")
+local OOO = Instance.new("TextLabel")
+local SwatVan = Instance.new("TextButton")
+local Ferrari = Instance.new("TextButton")
+local ComingSoon2 = Instance.new("TextButton")
+local DuneBuggy = Instance.new("TextButton")
+local ComingSoon3 = Instance.new("TextButton")
+local ChangelogGui = Instance.new("Frame")
+local Ok = Instance.new("TextButton")
+local GlobalLolA = Instance.new("Frame")
+local GlobalLolB = Instance.new("Frame")
+local ChangelogPrefix = Instance.new("TextLabel")
+local ChangelogText = Instance.new("TextLabel")
+local GlobalLolC = Instance.new("Frame")
+local ThisIsAText = Instance.new("TextLabel")
+local VersionB = Instance.new("TextLabel")
+local BringGui = Instance.new("Frame")
+local GlobalIEDFYH56TU = Instance.new("Frame")
+local CreatedByMe = Instance.new("TextLabel")
+local AwayPlease = Instance.new("TextButton")
+local AK47 = Instance.new("TextButton")
+local Pistol = Instance.new("TextButton")
+local Shotgun = Instance.new("TextButton")
+local SWATRifle = Instance.new("TextButton")
+local SWATPistol = Instance.new("TextButton")
+local Flashlight = Instance.new("TextButton")
+local Bring = Instance.new("TextButton")
+local GlobalASD = Instance.new("Frame")
+
+-- Properties
+
+local plr = game:GetService('Players').LocalPlayer
+local Mouse = plr:GetMouse()
+
+Mouse.KeyDown:connect(function(key)
+if key == 'o' then
+if MainGui.Visible then MainGui.Visible = false else MainGui.Visible = true
+end
+end
+end)
+
+Main.Name = "Main"
+Main.Parent = game.CoreGui
+
+MainGui.Name = "MainGui"
+MainGui.Parent = Main
+MainGui.Active = true
+MainGui.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
+MainGui.BorderSizePixel = 0
+MainGui.Draggable = true
+MainGui.Position = UDim2.new(0.228508443, 0, 0.387412578, 0)
+MainGui.Selectable = true
+MainGui.Size = UDim2.new(0, 726, 0, 312)
+MainGui.Visible = false
+
+GlobalA.Name = "GlobalA"
+GlobalA.Parent = MainGui
+GlobalA.BackgroundColor3 = Color3.new(0.0588235, 0.0588235, 0.0588235)
+GlobalA.BorderSizePixel = 0
+GlobalA.Size = UDim2.new(0, 726, 0, 31)
+
+Numbers.Name = "Numbers"
+Numbers.Parent = MainGui
+Numbers.BackgroundColor3 = Color3.new(0.0392157, 0.0392157, 0.0392157)
+Numbers.BorderColor3 = Color3.new(0.207843, 0.207843, 0.207843)
+Numbers.BorderSizePixel = 4
+Numbers.Position = UDim2.new(0.00826446246, 0, 0.176870748, 0)
+Numbers.Size = UDim2.new(0, 275, 0, 50)
+Numbers.Font = Enum.Font.SourceSansSemibold
+Numbers.Text = "Enter Value"
+Numbers.TextColor3 = Color3.new(1, 1, 1)
+Numbers.TextScaled = true
+Numbers.TextSize = 14
+Numbers.TextWrapped = true
+
+WalkSpeed.Name = "WalkSpeed"
+WalkSpeed.Parent = MainGui
+WalkSpeed.BackgroundColor3 = Color3.new(0.0196078, 0.0196078, 0.0196078)
+WalkSpeed.BorderSizePixel = 3
+WalkSpeed.Position = UDim2.new(0.406858534, 0, 0.176956654, 0)
+WalkSpeed.Size = UDim2.new(0, 136, 0, 50)
+WalkSpeed.Style = Enum.ButtonStyle.RobloxButton
+WalkSpeed.Font = Enum.Font.SourceSans
+WalkSpeed.Text = "WalkSpeed"
+WalkSpeed.TextColor3 = Color3.new(1, 1, 1)
+WalkSpeed.TextScaled = true
+WalkSpeed.TextSize = 14
+WalkSpeed.TextWrapped = true
+
+GlobalB.Name = "GlobalB"
+GlobalB.Parent = MainGui
+GlobalB.BackgroundColor3 = Color3.new(0.0588235, 0.0588235, 0.0588235)
+GlobalB.BorderSizePixel = 0
+GlobalB.Position = UDim2.new(0, 0, 0.413461536, 0)
+GlobalB.Size = UDim2.new(0, 726, 0, 31)
+
+InfAmmo.Name = "InfAmmo"
+InfAmmo.Parent = MainGui
+InfAmmo.BackgroundColor3 = Color3.new(0.0196078, 0.0196078, 0.0196078)
+InfAmmo.BorderSizePixel = 3
+InfAmmo.Position = UDim2.new(0.717535853, 0, 0.55261755, 0)
+InfAmmo.Size = UDim2.new(0, 200, 0, 50)
+InfAmmo.Style = Enum.ButtonStyle.RobloxButton
+InfAmmo.Font = Enum.Font.SourceSans
+InfAmmo.Text = "Inf Ammo: Off"
+InfAmmo.TextColor3 = Color3.new(1, 1, 1)
+InfAmmo.TextScaled = true
+InfAmmo.TextSize = 14
+InfAmmo.TextWrapped = true
+
+JumpPower.Name = "JumpPower"
+JumpPower.Parent = MainGui
+JumpPower.BackgroundColor3 = Color3.new(0.0196078, 0.0196078, 0.0196078)
+JumpPower.BorderSizePixel = 3
+JumpPower.Position = UDim2.new(0.607547462, 0, 0.175308049, 0)
+JumpPower.Size = UDim2.new(0, 136, 0, 50)
+JumpPower.Style = Enum.ButtonStyle.RobloxButton
+JumpPower.Font = Enum.Font.SourceSans
+JumpPower.Text = "JumpPower"
+JumpPower.TextColor3 = Color3.new(1, 1, 1)
+JumpPower.TextScaled = true
+JumpPower.TextSize = 14
+JumpPower.TextWrapped = true
+
+ClickTp.Name = "ClickTp"
+ClickTp.Parent = MainGui
+ClickTp.BackgroundColor3 = Color3.new(0.0196078, 0.0196078, 0.0196078)
+ClickTp.BorderSizePixel = 3
+ClickTp.Position = UDim2.new(0.0077894982, 0, 0.55261755, 0)
+ClickTp.Size = UDim2.new(0, 200, 0, 50)
+ClickTp.Style = Enum.ButtonStyle.RobloxButton
+ClickTp.Font = Enum.Font.SourceSans
+ClickTp.Text = "Click Tp"
+ClickTp.TextColor3 = Color3.new(1, 1, 1)
+ClickTp.TextScaled = true
+ClickTp.TextSize = 14
+ClickTp.TextWrapped = true
+
+Teleport.Name = "Teleport"
+Teleport.Parent = MainGui
+Teleport.BackgroundColor3 = Color3.new(0.0196078, 0.0196078, 0.0196078)
+Teleport.BorderSizePixel = 3
+Teleport.Position = UDim2.new(0.80578512, 0, 0.176870793, 0)
+Teleport.Size = UDim2.new(0, 136, 0, 50)
+Teleport.Style = Enum.ButtonStyle.RobloxButton
+Teleport.Font = Enum.Font.SourceSans
+Teleport.Text = "Teleport"
+Teleport.TextColor3 = Color3.new(1, 1, 1)
+Teleport.TextScaled = true
+Teleport.TextSize = 14
+Teleport.TextWrapped = true
+
+Created.Name = "Created"
+Created.Parent = MainGui
+Created.BackgroundColor3 = Color3.new(0.0588235, 0.0588235, 0.0588235)
+Created.BorderSizePixel = 0
+Created.Position = UDim2.new(0.00826446246, 0, 0, 0)
+Created.Size = UDim2.new(0, 200, 0, 31)
+Created.Font = Enum.Font.SourceSans
+Created.Text = "Created By: TheAmazingShow"
+Created.TextColor3 = Color3.new(1, 1, 1)
+Created.TextScaled = true
+Created.TextSize = 14
+Created.TextWrapped = true
+
+Version.Name = "Version"
+Version.Parent = MainGui
+Version.BackgroundColor3 = Color3.new(0.0588235, 0.0588235, 0.0588235)
+Version.BorderSizePixel = 0
+Version.Position = UDim2.new(0.818181813, 0, 0, 0)
+Version.Size = UDim2.new(0, 127, 0, 31)
+Version.Font = Enum.Font.SourceSans
+Version.Text = "v 2.1.4b | 12/28"
+Version.TextColor3 = Color3.new(1, 1, 1)
+Version.TextScaled = true
+Version.TextSize = 14
+Version.TextWrapped = true
+
+Place.Name = "Place"
+Place.Parent = MainGui
+Place.BackgroundColor3 = Color3.new(0.0196078, 0.0196078, 0.0196078)
+Place.BorderSizePixel = 3
+Place.Position = UDim2.new(0.362472683, 0, 0.512731493, 0)
+Place.Size = UDim2.new(0, 200, 0, 50)
+Place.Style = Enum.ButtonStyle.RobloxButton
+Place.Font = Enum.Font.SourceSans
+Place.Text = "Teleport To Place"
+Place.TextColor3 = Color3.new(1, 1, 1)
+Place.TextScaled = true
+Place.TextSize = 14
+Place.TextWrapped = true
+
+Credits.Name = "Credits"
+Credits.Parent = MainGui
+Credits.BackgroundColor3 = Color3.new(0.0196078, 0.0196078, 0.0196078)
+Credits.BorderSizePixel = 3
+Credits.Position = UDim2.new(0.361783952, 0, 0.82077527, 0)
+Credits.Size = UDim2.new(0, 200, 0, 50)
+Credits.Style = Enum.ButtonStyle.RobloxButton
+Credits.Font = Enum.Font.SourceSans
+Credits.Text = "Credits"
+Credits.TextColor3 = Color3.new(1, 1, 1)
+Credits.TextScaled = true
+Credits.TextSize = 14
+Credits.TextWrapped = true
+
+CreditsGui.Name = "CreditsGui"
+CreditsGui.Parent = Main
+CreditsGui.Active = true
+CreditsGui.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
+CreditsGui.BorderSizePixel = 0
+CreditsGui.Draggable = true
+CreditsGui.Position = UDim2.new(0.312593699, 0, 0.227272734, 0)
+CreditsGui.Selectable = true
+CreditsGui.Size = UDim2.new(0, 499, 0, 371)
+CreditsGui.Visible = false
+
+GlobalD.Name = "GlobalD"
+GlobalD.Parent = CreditsGui
+GlobalD.BackgroundColor3 = Color3.new(0.0588235, 0.0588235, 0.0588235)
+GlobalD.BorderSizePixel = 0
+GlobalD.Size = UDim2.new(0, 499, 0, 31)
+
+Away.Name = "Away"
+Away.Parent = CreditsGui
+Away.BackgroundColor3 = Color3.new(0.0588235, 0.0588235, 0.0588235)
+Away.BorderSizePixel = 0
+Away.Position = UDim2.new(0.920631409, 0, 0.0119120078, 0)
+Away.Size = UDim2.new(0, 40, 0, 23)
+Away.Font = Enum.Font.SourceSans
+Away.Text = "X"
+Away.TextColor3 = Color3.new(1, 1, 1)
+Away.TextScaled = true
+Away.TextSize = 14
+Away.TextWrapped = true
+
+Text.Name = "Text"
+Text.Parent = CreditsGui
+Text.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
+Text.BorderSizePixel = 0
+Text.Position = UDim2.new(0, 0, 0.0835579485, 0)
+Text.Size = UDim2.new(0, 499, 0, 323)
+Text.Font = Enum.Font.SourceSans
+Text.Text = "TheAmazingShow Bypass"
+Text.TextColor3 = Color3.new(1, 1, 1)
+Text.TextScaled = true
+Text.TextSize = 14
+Text.TextWrapped = true
+
+PlaceTeleport.Name = "PlaceTeleport"
+PlaceTeleport.Parent = Main
+PlaceTeleport.Active = true
+PlaceTeleport.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
+PlaceTeleport.BorderSizePixel = 0
+PlaceTeleport.Draggable = true
+PlaceTeleport.Position = UDim2.new(0.227773696, 0, 0.283916086, 0)
+PlaceTeleport.Selectable = true
+PlaceTeleport.Size = UDim2.new(0, 726, 0, 323)
+PlaceTeleport.Visible = false
+
+GlobalE.Name = "GlobalE"
+GlobalE.Parent = PlaceTeleport
+GlobalE.BackgroundColor3 = Color3.new(0.0588235, 0.0588235, 0.0588235)
+GlobalE.BorderSizePixel = 0
+GlobalE.Size = UDim2.new(0, 726, 0, 31)
+
+BankOutside.Name = "Bank Outside"
+BankOutside.Parent = PlaceTeleport
+BankOutside.BackgroundColor3 = Color3.new(0.0196078, 0.0196078, 0.0196078)
+BankOutside.BorderSizePixel = 3
+BankOutside.Position = UDim2.new(0.00878692232, 0, 0.176956654, 0)
+BankOutside.Size = UDim2.new(0, 136, 0, 50)
+BankOutside.Style = Enum.ButtonStyle.RobloxButton
+BankOutside.Font = Enum.Font.SourceSans
+BankOutside.Text = "Bank Outside"
+BankOutside.TextColor3 = Color3.new(1, 1, 1)
+BankOutside.TextScaled = true
+BankOutside.TextSize = 14
+BankOutside.TextWrapped = true
+
+GlobalF.Name = "GlobalF"
+GlobalF.Parent = PlaceTeleport
+GlobalF.BackgroundColor3 = Color3.new(0.0588235, 0.0588235, 0.0588235)
+GlobalF.BorderSizePixel = 0
+GlobalF.Position = UDim2.new(0, 0, 0.452380955, 0)
+GlobalF.Size = UDim2.new(0, 726, 0, 31)
+
+Donut.Name = "Donut"
+Donut.Parent = PlaceTeleport
+Donut.BackgroundColor3 = Color3.new(0.0196078, 0.0196078, 0.0196078)
+Donut.BorderSizePixel = 3
+Donut.Position = UDim2.new(0.717535853, 0, 0.684027791, 0)
+Donut.Size = UDim2.new(0, 200, 0, 50)
+Donut.Style = Enum.ButtonStyle.RobloxButton
+Donut.Font = Enum.Font.SourceSans
+Donut.Text = "Donut"
+Donut.TextColor3 = Color3.new(1, 1, 1)
+Donut.TextScaled = true
+Donut.TextSize = 14
+Donut.TextWrapped = true
+
+PoliceStation1.Name = "Police Station 1"
+PoliceStation1.Parent = PlaceTeleport
+PoliceStation1.BackgroundColor3 = Color3.new(0.0196078, 0.0196078, 0.0196078)
+PoliceStation1.BorderSizePixel = 3
+PoliceStation1.Position = UDim2.new(0.606169999, 0, 0.178565383, 0)
+PoliceStation1.Size = UDim2.new(0, 136, 0, 50)
+PoliceStation1.Style = Enum.ButtonStyle.RobloxButton
+PoliceStation1.Font = Enum.Font.SourceSans
+PoliceStation1.Text = "Police Station 1"
+PoliceStation1.TextColor3 = Color3.new(1, 1, 1)
+PoliceStation1.TextScaled = true
+PoliceStation1.TextSize = 14
+PoliceStation1.TextWrapped = true
+
+Gas.Name = "Gas"
+Gas.Parent = PlaceTeleport
+Gas.BackgroundColor3 = Color3.new(0.0196078, 0.0196078, 0.0196078)
+Gas.BorderSizePixel = 3
+Gas.Position = UDim2.new(0.0133364033, 0, 0.580268979, 0)
+Gas.Size = UDim2.new(0, 200, 0, 50)
+Gas.Style = Enum.ButtonStyle.RobloxButton
+Gas.Font = Enum.Font.SourceSans
+Gas.Text = "Gas"
+Gas.TextColor3 = Color3.new(1, 1, 1)
+Gas.TextScaled = true
+Gas.TextSize = 14
+Gas.TextWrapped = true
+
+PoliceStation2.Name = "Police Station 2"
+PoliceStation2.Parent = PlaceTeleport
+PoliceStation2.BackgroundColor3 = Color3.new(0.0196078, 0.0196078, 0.0196078)
+PoliceStation2.BorderSizePixel = 3
+PoliceStation2.Position = UDim2.new(0.806274593, 0, 0.177573323, 0)
+PoliceStation2.Size = UDim2.new(0, 136, 0, 50)
+PoliceStation2.Style = Enum.ButtonStyle.RobloxButton
+PoliceStation2.Font = Enum.Font.SourceSans
+PoliceStation2.Text = "Police Station 2"
+PoliceStation2.TextColor3 = Color3.new(1, 1, 1)
+PoliceStation2.TextScaled = true
+PoliceStation2.TextSize = 14
+PoliceStation2.TextWrapped = true
+
+CriminalBase1.Name = "Criminal  Base 1"
+CriminalBase1.Parent = PlaceTeleport
+CriminalBase1.BackgroundColor3 = Color3.new(0.0196078, 0.0196078, 0.0196078)
+CriminalBase1.BorderSizePixel = 3
+CriminalBase1.Position = UDim2.new(0.362258941, 0, 0.557275534, 0)
+CriminalBase1.Size = UDim2.new(0, 200, 0, 44)
+CriminalBase1.Style = Enum.ButtonStyle.RobloxButton
+CriminalBase1.Font = Enum.Font.SourceSans
+CriminalBase1.Text = "Criminal  Base 1"
+CriminalBase1.TextColor3 = Color3.new(1, 1, 1)
+CriminalBase1.TextScaled = true
+CriminalBase1.TextSize = 14
+CriminalBase1.TextWrapped = true
+
+CriminalBase2.Name = "Criminal  Base 2"
+CriminalBase2.Parent = PlaceTeleport
+CriminalBase2.BackgroundColor3 = Color3.new(0.0196078, 0.0196078, 0.0196078)
+CriminalBase2.BorderSizePixel = 3
+CriminalBase2.Position = UDim2.new(0.362258971, 0, 0.862243176, 0)
+CriminalBase2.Size = UDim2.new(0, 200, 0, 44)
+CriminalBase2.Style = Enum.ButtonStyle.RobloxButton
+CriminalBase2.Font = Enum.Font.SourceSans
+CriminalBase2.Text = "Criminal  Base 2"
+CriminalBase2.TextColor3 = Color3.new(1, 1, 1)
+CriminalBase2.TextScaled = true
+CriminalBase2.TextSize = 14
+CriminalBase2.TextWrapped = true
+
+BankInside.Name = "Bank Inside"
+BankInside.Parent = PlaceTeleport
+BankInside.BackgroundColor3 = Color3.new(0.0196078, 0.0196078, 0.0196078)
+BankInside.BorderSizePixel = 3
+BankInside.Position = UDim2.new(0.209248677, 0, 0.176567644, 0)
+BankInside.Size = UDim2.new(0, 136, 0, 50)
+BankInside.Style = Enum.ButtonStyle.RobloxButton
+BankInside.Font = Enum.Font.SourceSans
+BankInside.Text = "Bank Inside"
+BankInside.TextColor3 = Color3.new(1, 1, 1)
+BankInside.TextScaled = true
+BankInside.TextSize = 14
+BankInside.TextWrapped = true
+
+JewelryOutside.Name = "Jewelry Outside"
+JewelryOutside.Parent = PlaceTeleport
+JewelryOutside.BackgroundColor3 = Color3.new(0.0196078, 0.0196078, 0.0196078)
+JewelryOutside.BorderSizePixel = 3
+JewelryOutside.Position = UDim2.new(0.40621838, 0, 0.105139069, 0)
+JewelryOutside.Size = UDim2.new(0, 136, 0, 50)
+JewelryOutside.Style = Enum.ButtonStyle.RobloxButton
+JewelryOutside.Font = Enum.Font.SourceSans
+JewelryOutside.Text = "Jewelry Outside"
+JewelryOutside.TextColor3 = Color3.new(1, 1, 1)
+JewelryOutside.TextScaled = true
+JewelryOutside.TextSize = 14
+JewelryOutside.TextWrapped = true
+
+JewelryInside.Name = "Jewelry Inside"
+JewelryInside.Parent = PlaceTeleport
+JewelryInside.BackgroundColor3 = Color3.new(0.0196078, 0.0196078, 0.0196078)
+JewelryInside.BorderSizePixel = 3
+JewelryInside.Position = UDim2.new(0.40621838, 0, 0.28200981, 0)
+JewelryInside.Size = UDim2.new(0, 136, 0, 50)
+JewelryInside.Style = Enum.ButtonStyle.RobloxButton
+JewelryInside.Font = Enum.Font.SourceSans
+JewelryInside.Text = "Jewelry Inside"
+JewelryInside.TextColor3 = Color3.new(1, 1, 1)
+JewelryInside.TextScaled = true
+JewelryInside.TextSize = 14
+JewelryInside.TextWrapped = true
+
+Need.Name = "Need"
+Need.Parent = PlaceTeleport
+Need.BackgroundColor3 = Color3.new(0.0588235, 0.0588235, 0.0588235)
+Need.BorderSizePixel = 0
+Need.Position = UDim2.new(0.94765842, 0, 0.0153061226, 0)
+Need.Size = UDim2.new(0, 38, 0, 22)
+Need.Font = Enum.Font.SourceSans
+Need.Text = "X"
+Need.TextColor3 = Color3.new(1, 1, 1)
+Need.TextScaled = true
+Need.TextSize = 14
+Need.TextWrapped = true
+
+Made.Name = "Made"
+Made.Parent = PlaceTeleport
+Made.BackgroundColor3 = Color3.new(0.0588235, 0.0588235, 0.0588235)
+Made.BorderSizePixel = 0
+Made.Position = UDim2.new(0.000631913543, 0, -0.000523686409, 0)
+Made.Size = UDim2.new(0, 200, 0, 31)
+Made.Font = Enum.Font.SourceSans
+Made.Text = "Created By: TheAmazingShow"
+Made.TextColor3 = Color3.new(1, 1, 1)
+Made.TextScaled = true
+Made.TextSize = 14
+Made.TextWrapped = true
+
+
+Store.Name = "Store"
+Store.Parent = PlaceTeleport
+Store.BackgroundColor3 = Color3.new(0.0196078, 0.0196078, 0.0196078)
+Store.BorderSizePixel = 3
+Store.Position = UDim2.new(0.362258941, 0, 0.693498433, 0)
+Store.Size = UDim2.new(0, 200, 0, 55)
+Store.Style = Enum.ButtonStyle.RobloxButton
+Store.Font = Enum.Font.SourceSans
+Store.Text = "1M Store"
+Store.TextColor3 = Color3.new(1, 1, 1)
+Store.TextScaled = true
+Store.TextSize = 14
+Store.TextWrapped = true
+
+JailbreakStacks.Name = "LuciHUB"
+JailbreakStacks.Parent = MainGui
+JailbreakStacks.BackgroundColor3 = Color3.new(0.0588235, 0.0588235, 0.0588235)
+JailbreakStacks.BorderSizePixel = 0
+JailbreakStacks.Position = UDim2.new(0.371212125, 0, 0, 0)
+JailbreakStacks.Size = UDim2.new(0, 200, 0, 31)
+JailbreakStacks.Font = Enum.Font.SourceSans
+JailbreakStacks.Text = "I|JailbreakStacks|I"
+JailbreakStacks.TextColor3 = Color3.new(1, 1, 1)
+JailbreakStacks.TextScaled = true
+JailbreakStacks.TextSize = 14
+JailbreakStacks.TextWrapped = true
+
+Color.Name = "Color"
+Color.Parent = MainGui
+Color.BackgroundColor3 = Color3.new(0.0588235, 0.0588235, 0.0588235)
+Color.BorderSizePixel = 0
+Color.Position = UDim2.new(0.528925598, 0, 0, 0)
+Color.Size = UDim2.new(0, 69, 0, 31)
+Color.Font = Enum.Font.SourceSans
+Color.Text = "Stacks"
+Color.TextColor3 = Color3.new(0.247059, 0.364706, 0.490196)
+Color.TextScaled = true
+Color.TextSize = 14
+Color.TextWrapped = true
+
+TeleportTo.Name = "TeleportTo"
+TeleportTo.Parent = MainGui
+TeleportTo.BackgroundColor3 = Color3.new(0.0196078, 0.0196078, 0.0196078)
+TeleportTo.BorderSizePixel = 3
+TeleportTo.Position = UDim2.new(0.00816946197, 0, 0.821848273, 0)
+TeleportTo.Size = UDim2.new(0, 200, 0, 50)
+TeleportTo.Style = Enum.ButtonStyle.RobloxButton
+TeleportTo.Font = Enum.Font.SourceSans
+TeleportTo.Text = "Teleport To Criminals"
+TeleportTo.TextColor3 = Color3.new(1, 1, 1)
+TeleportTo.TextScaled = true
+TeleportTo.TextSize = 14
+TeleportTo.TextWrapped = true
+
+CarsTeleport.Name = "CarsTeleport"
+CarsTeleport.Parent = Main
+CarsTeleport.Active = true
+CarsTeleport.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
+CarsTeleport.BorderSizePixel = 0
+CarsTeleport.Draggable = true
+CarsTeleport.Position = UDim2.new(0.227773696, 0, 0.283916086, 0)
+CarsTeleport.Selectable = true
+CarsTeleport.Size = UDim2.new(0, 726, 0, 323)
+CarsTeleport.Visible = false
+
+GlobalG.Name = "GlobalG"
+GlobalG.Parent = CarsTeleport
+GlobalG.BackgroundColor3 = Color3.new(0.0588235, 0.0588235, 0.0588235)
+GlobalG.BorderSizePixel = 0
+GlobalG.Size = UDim2.new(0, 726, 0, 31)
+
+Camaro.Name = "Camaro"
+Camaro.Parent = CarsTeleport
+Camaro.BackgroundColor3 = Color3.new(0.0196078, 0.0196078, 0.0196078)
+Camaro.BorderSizePixel = 3
+Camaro.Position = UDim2.new(0.00878692232, 0, 0.176956654, 0)
+Camaro.Size = UDim2.new(0, 136, 0, 50)
+Camaro.Style = Enum.ButtonStyle.RobloxButton
+Camaro.Font = Enum.Font.SourceSans
+Camaro.Text = "Camaro"
+Camaro.TextColor3 = Color3.new(1, 1, 1)
+Camaro.TextScaled = true
+Camaro.TextSize = 14
+Camaro.TextWrapped = true
+
+GlobalH.Name = "GlobalH"
+GlobalH.Parent = CarsTeleport
+GlobalH.BackgroundColor3 = Color3.new(0.0588235, 0.0588235, 0.0588235)
+GlobalH.BorderSizePixel = 0
+GlobalH.Position = UDim2.new(0, 0, 0.452380955, 0)
+GlobalH.Size = UDim2.new(0, 726, 0, 31)
+
+Mustang.Name = "Mustang"
+Mustang.Parent = CarsTeleport
+Mustang.BackgroundColor3 = Color3.new(0.0196078, 0.0196078, 0.0196078)
+Mustang.BorderSizePixel = 3
+Mustang.Position = UDim2.new(0.604792595, 0, 0.175297409, 0)
+Mustang.Size = UDim2.new(0, 136, 0, 50)
+Mustang.Style = Enum.ButtonStyle.RobloxButton
+Mustang.Font = Enum.Font.SourceSans
+Mustang.Text = "Mustang"
+Mustang.TextColor3 = Color3.new(1, 1, 1)
+Mustang.TextScaled = true
+Mustang.TextSize = 14
+Mustang.TextWrapped = true
+
+ATV.Name = "ATV"
+ATV.Parent = CarsTeleport
+ATV.BackgroundColor3 = Color3.new(0.0196078, 0.0196078, 0.0196078)
+ATV.BorderSizePixel = 3
+ATV.Position = UDim2.new(0.806274593, 0, 0.177573323, 0)
+ATV.Size = UDim2.new(0, 136, 0, 50)
+ATV.Style = Enum.ButtonStyle.RobloxButton
+ATV.Font = Enum.Font.SourceSans
+ATV.Text = "ATV"
+ATV.TextColor3 = Color3.new(1, 1, 1)
+ATV.TextScaled = true
+ATV.TextSize = 14
+ATV.TextWrapped = true
+
+DirtBike.Name = "Dirt Bike"
+DirtBike.Parent = CarsTeleport
+DirtBike.BackgroundColor3 = Color3.new(0.0196078, 0.0196078, 0.0196078)
+DirtBike.BorderSizePixel = 3
+DirtBike.Position = UDim2.new(0.362258941, 0, 0.557275534, 0)
+DirtBike.Size = UDim2.new(0, 200, 0, 44)
+DirtBike.Style = Enum.ButtonStyle.RobloxButton
+DirtBike.Font = Enum.Font.SourceSans
+DirtBike.Text = "Dirt Bike"
+DirtBike.TextColor3 = Color3.new(1, 1, 1)
+DirtBike.TextScaled = true
+DirtBike.TextSize = 14
+DirtBike.TextWrapped = true
+
+Heli.Name = "Heli"
+Heli.Parent = CarsTeleport
+Heli.BackgroundColor3 = Color3.new(0.0196078, 0.0196078, 0.0196078)
+Heli.BorderSizePixel = 3
+Heli.Position = UDim2.new(0.362258971, 0, 0.862243176, 0)
+Heli.Size = UDim2.new(0, 200, 0, 44)
+Heli.Style = Enum.ButtonStyle.RobloxButton
+Heli.Font = Enum.Font.SourceSans
+Heli.Text = "Heli"
+Heli.TextColor3 = Color3.new(1, 1, 1)
+Heli.TextScaled = true
+Heli.TextSize = 14
+Heli.TextWrapped = true
+
+Lamborghini.Name = "Lamborghini"
+Lamborghini.Parent = CarsTeleport
+Lamborghini.BackgroundColor3 = Color3.new(0.0196078, 0.0196078, 0.0196078)
+Lamborghini.BorderSizePixel = 3
+Lamborghini.Position = UDim2.new(0.209248677, 0, 0.176567644, 0)
+Lamborghini.Size = UDim2.new(0, 136, 0, 50)
+Lamborghini.Style = Enum.ButtonStyle.RobloxButton
+Lamborghini.Font = Enum.Font.SourceSans
+Lamborghini.Text = "Lamborghini"
+Lamborghini.TextColor3 = Color3.new(1, 1, 1)
+Lamborghini.TextScaled = true
+Lamborghini.TextSize = 14
+Lamborghini.TextWrapped = true
+
+Monster.Name = "Monster"
+Monster.Parent = CarsTeleport
+Monster.BackgroundColor3 = Color3.new(0.0196078, 0.0196078, 0.0196078)
+Monster.BorderSizePixel = 3
+Monster.Position = UDim2.new(0.40621838, 0, 0.105139069, 0)
+Monster.Size = UDim2.new(0, 136, 0, 50)
+Monster.Style = Enum.ButtonStyle.RobloxButton
+Monster.Font = Enum.Font.SourceSans
+Monster.Text = "Monster"
+Monster.TextColor3 = Color3.new(1, 1, 1)
+Monster.TextScaled = true
+Monster.TextSize = 14
+Monster.TextWrapped = true
+
+Volt.Name = "Volt"
+Volt.Parent = CarsTeleport
+Volt.BackgroundColor3 = Color3.new(0.0196078, 0.0196078, 0.0196078)
+Volt.BorderSizePixel = 3
+Volt.Position = UDim2.new(0.40621838, 0, 0.28200981, 0)
+Volt.Size = UDim2.new(0, 136, 0, 50)
+Volt.Style = Enum.ButtonStyle.RobloxButton
+Volt.Font = Enum.Font.SourceSans
+Volt.Text = "Volt"
+Volt.TextColor3 = Color3.new(1, 1, 1)
+Volt.TextScaled = true
+Volt.TextSize = 14
+Volt.TextWrapped = true
+
+GetOut.Name = "GetOut"
+GetOut.Parent = CarsTeleport
+GetOut.BackgroundColor3 = Color3.new(0.0588235, 0.0588235, 0.0588235)
+GetOut.BorderSizePixel = 0
+GetOut.Position = UDim2.new(0.94765842, 0, 0.0153061226, 0)
+GetOut.Size = UDim2.new(0, 38, 0, 22)
+GetOut.Font = Enum.Font.SourceSans
+GetOut.Text = "X"
+GetOut.TextColor3 = Color3.new(1, 1, 1)
+GetOut.TextScaled = true
+GetOut.TextSize = 14
+GetOut.TextWrapped = true
+
+AAA.Name = "AAA"
+AAA.Parent = CarsTeleport
+AAA.BackgroundColor3 = Color3.new(0.0588235, 0.0588235, 0.0588235)
+AAA.BorderSizePixel = 0
+AAA.Position = UDim2.new(0.000631913543, 0, -0.000523686409, 0)
+AAA.Size = UDim2.new(0, 200, 0, 31)
+AAA.Font = Enum.Font.SourceSans
+AAA.Text = "Created By: TheAmazingShow"
+AAA.TextColor3 = Color3.new(1, 1, 1)
+AAA.TextScaled = true
+AAA.TextSize = 14
+AAA.TextWrapped = true
+
+MoreVehicles.Name = "MoreVehicles"
+MoreVehicles.Parent = CarsTeleport
+MoreVehicles.BackgroundColor3 = Color3.new(0.0196078, 0.0196078, 0.0196078)
+MoreVehicles.BorderSizePixel = 3
+MoreVehicles.Position = UDim2.new(0.362258941, 0, 0.693498433, 0)
+MoreVehicles.Size = UDim2.new(0, 200, 0, 55)
+MoreVehicles.Style = Enum.ButtonStyle.RobloxButton
+MoreVehicles.Font = Enum.Font.SourceSans
+MoreVehicles.Text = "More Vehicles"
+MoreVehicles.TextColor3 = Color3.new(1, 1, 1)
+MoreVehicles.TextScaled = true
+MoreVehicles.TextSize = 14
+MoreVehicles.TextWrapped = true
+
+Cars.Name = "Cars"
+Cars.Parent = MainGui
+Cars.BackgroundColor3 = Color3.new(0.0196078, 0.0196078, 0.0196078)
+Cars.BorderSizePixel = 3
+Cars.Position = UDim2.new(0.717535853, 0, 0.821848333, 0)
+Cars.Size = UDim2.new(0, 200, 0, 50)
+Cars.Style = Enum.ButtonStyle.RobloxButton
+Cars.Font = Enum.Font.SourceSans
+Cars.Text = "Teleport To Cars"
+Cars.TextColor3 = Color3.new(1, 1, 1)
+Cars.TextScaled = true
+Cars.TextSize = 14
+Cars.TextWrapped = true
+
+Bugatti.Name = "Bugatti"
+Bugatti.Parent = CarsTeleport
+Bugatti.BackgroundColor3 = Color3.new(0.0196078, 0.0196078, 0.0196078)
+Bugatti.BorderSizePixel = 3
+Bugatti.Position = UDim2.new(0.00826443825, 0, 0.575851381, 0)
+Bugatti.Size = UDim2.new(0, 200, 0, 55)
+Bugatti.Style = Enum.ButtonStyle.RobloxButton
+Bugatti.Font = Enum.Font.SourceSans
+Bugatti.Text = "Bugatti"
+Bugatti.TextColor3 = Color3.new(1, 1, 1)
+Bugatti.TextScaled = true
+Bugatti.TextSize = 14
+Bugatti.TextWrapped = true
+
+SUV.Name = "SUV"
+SUV.Parent = CarsTeleport
+SUV.BackgroundColor3 = Color3.new(0.0196078, 0.0196078, 0.0196078)
+SUV.BorderSizePixel = 3
+SUV.Position = UDim2.new(0.717630804, 0, 0.575851381, 0)
+SUV.Size = UDim2.new(0, 200, 0, 55)
+SUV.Style = Enum.ButtonStyle.RobloxButton
+SUV.Font = Enum.Font.SourceSans
+SUV.Text = "SUV"
+SUV.TextColor3 = Color3.new(1, 1, 1)
+SUV.TextScaled = true
+SUV.TextSize = 14
+SUV.TextWrapped = true
+
+Jail.Name = "Jail"
+Jail.Parent = PlaceTeleport
+Jail.BackgroundColor3 = Color3.new(0.0196078, 0.0196078, 0.0196078)
+Jail.BorderSizePixel = 3
+Jail.Position = UDim2.new(0.0139206052, 0, 0.812243819, 0)
+Jail.Size = UDim2.new(0, 200, 0, 50)
+Jail.Style = Enum.ButtonStyle.RobloxButton
+Jail.Font = Enum.Font.SourceSans
+Jail.Text = "Jail"
+Jail.TextColor3 = Color3.new(1, 1, 1)
+Jail.TextScaled = true
+Jail.TextSize = 14
+Jail.TextWrapped = true
+
+FeaturesGui.Name = "FeaturesGui"
+FeaturesGui.Parent = Main
+FeaturesGui.Active = true
+FeaturesGui.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
+FeaturesGui.BorderSizePixel = 0
+FeaturesGui.Draggable = true
+FeaturesGui.Position = UDim2.new(0.228508443, 0, 0.387412578, 0)
+FeaturesGui.Selectable = true
+FeaturesGui.Size = UDim2.new(0, 726, 0, 312)
+FeaturesGui.Visible = false
+
+GlobalI.Name = "GlobalI"
+GlobalI.Parent = FeaturesGui
+GlobalI.BackgroundColor3 = Color3.new(0.0588235, 0.0588235, 0.0588235)
+GlobalI.BorderSizePixel = 0
+GlobalI.Size = UDim2.new(0, 726, 0, 31)
+
+Nitro.Name = "Nitro"
+Nitro.Parent = FeaturesGui
+Nitro.BackgroundColor3 = Color3.new(0.0196078, 0.0196078, 0.0196078)
+Nitro.BorderSizePixel = 3
+Nitro.Position = UDim2.new(0.00826446339, 0, 0.179487184, 0)
+Nitro.Size = UDim2.new(0, 145, 0, 50)
+Nitro.Style = Enum.ButtonStyle.RobloxButton
+Nitro.Font = Enum.Font.SourceSans
+Nitro.Text = "Inf Nitro: Off"
+Nitro.TextColor3 = Color3.new(1, 1, 1)
+Nitro.TextScaled = true
+Nitro.TextSize = 14
+Nitro.TextWrapped = true
+
+GlobalJ.Name = "GlobalJ"
+GlobalJ.Parent = FeaturesGui
+GlobalJ.BackgroundColor3 = Color3.new(0.0588235, 0.0588235, 0.0588235)
+GlobalJ.BorderSizePixel = 0
+GlobalJ.Position = UDim2.new(0, 0, 0.413461536, 0)
+GlobalJ.Size = UDim2.new(0, 726, 0, 31)
+
+Doors.Name = "Doors"
+Doors.Parent = FeaturesGui
+Doors.BackgroundColor3 = Color3.new(0.0196078, 0.0196078, 0.0196078)
+Doors.BorderSizePixel = 3
+Doors.Position = UDim2.new(0.213498622, 0, 0.178473353, 0)
+Doors.Size = UDim2.new(0, 136, 0, 50)
+Doors.Style = Enum.ButtonStyle.RobloxButton
+Doors.Font = Enum.Font.SourceSans
+Doors.Text = "Remove Doors"
+Doors.TextColor3 = Color3.new(1, 1, 1)
+Doors.TextScaled = true
+Doors.TextSize = 14
+Doors.TextWrapped = true
+
+gdfgdfg.Name = "gdfgdfg"
+gdfgdfg.Parent = FeaturesGui
+gdfgdfg.BackgroundColor3 = Color3.new(0.0588235, 0.0588235, 0.0588235)
+gdfgdfg.BorderSizePixel = 0
+gdfgdfg.Position = UDim2.new(0.00826446246, 0, 0, 0)
+gdfgdfg.Size = UDim2.new(0, 200, 0, 31)
+gdfgdfg.Font = Enum.Font.SourceSans
+gdfgdfg.Text = "Created By: TheAmazingShow"
+gdfgdfg.TextColor3 = Color3.new(1, 1, 1)
+gdfgdfg.TextScaled = true
+gdfgdfg.TextSize = 14
+gdfgdfg.TextWrapped = true
+
+Kms.Name = "Kms"
+Kms.Parent = FeaturesGui
+Kms.BackgroundColor3 = Color3.new(0.0588235, 0.0588235, 0.0588235)
+Kms.BorderSizePixel = 0
+Kms.Position = UDim2.new(0.945413768, 0, 0.0124217179, 0)
+Kms.Size = UDim2.new(0, 40, 0, 23)
+Kms.Font = Enum.Font.SourceSans
+Kms.Text = "X"
+Kms.TextColor3 = Color3.new(1, 1, 1)
+Kms.TextScaled = true
+Kms.TextSize = 14
+Kms.TextWrapped = true
+
+Features.Name = "Features"
+Features.Parent = MainGui
+Features.BackgroundColor3 = Color3.new(0.0196078, 0.0196078, 0.0196078)
+Features.BorderSizePixel = 3
+Features.Position = UDim2.new(0.362258941, 0, 0.669871807, 0)
+Features.Size = UDim2.new(0, 200, 0, 47)
+Features.Style = Enum.ButtonStyle.RobloxButton
+Features.Font = Enum.Font.SourceSans
+Features.Text = "More Features"
+Features.TextColor3 = Color3.new(1, 1, 1)
+Features.TextScaled = true
+Features.TextSize = 14
+Features.TextWrapped = true
+
+Lasers.Name = "Lasers"
+Lasers.Parent = FeaturesGui
+Lasers.BackgroundColor3 = Color3.new(0.0196078, 0.0196078, 0.0196078)
+Lasers.BorderSizePixel = 3
+Lasers.Position = UDim2.new(0.409090817, 0, 0.180075929, 0)
+Lasers.Size = UDim2.new(0, 136, 0, 50)
+Lasers.Style = Enum.ButtonStyle.RobloxButton
+Lasers.Font = Enum.Font.SourceSans
+Lasers.Text = "Remove Lasers"
+Lasers.TextColor3 = Color3.new(1, 1, 1)
+Lasers.TextScaled = true
+Lasers.TextSize = 14
+Lasers.TextWrapped = true
+
+McLaren.Name = "McLaren"
+McLaren.Parent = CarsTeleport
+McLaren.BackgroundColor3 = Color3.new(0.0196078, 0.0196078, 0.0196078)
+McLaren.BorderSizePixel = 3
+McLaren.Position = UDim2.new(0.00826443825, 0, 0.80804956, 0)
+McLaren.Size = UDim2.new(0, 200, 0, 55)
+McLaren.Style = Enum.ButtonStyle.RobloxButton
+McLaren.Font = Enum.Font.SourceSans
+McLaren.Text = "McLaren"
+McLaren.TextColor3 = Color3.new(1, 1, 1)
+McLaren.TextScaled = true
+McLaren.TextSize = 14
+McLaren.TextWrapped = true
+
+Model3.Name = "Model3"
+Model3.Parent = CarsTeleport
+Model3.BackgroundColor3 = Color3.new(0.0196078, 0.0196078, 0.0196078)
+Model3.BorderSizePixel = 3
+Model3.Position = UDim2.new(0.717794776, 0, 0.809569359, 0)
+Model3.Size = UDim2.new(0, 200, 0, 55)
+Model3.Style = Enum.ButtonStyle.RobloxButton
+Model3.Font = Enum.Font.SourceSans
+Model3.Text = "Model3"
+Model3.TextColor3 = Color3.new(1, 1, 1)
+Model3.TextScaled = true
+Model3.TextSize = 14
+Model3.TextWrapped = true
+
+Stories.Name = "Stories"
+Stories.Parent = FeaturesGui
+Stories.BackgroundColor3 = Color3.new(0.0196078, 0.0196078, 0.0196078)
+Stories.BorderSizePixel = 3
+Stories.Position = UDim2.new(0.611570179, 0, 0.178473353, 0)
+Stories.Size = UDim2.new(0, 136, 0, 50)
+Stories.Style = Enum.ButtonStyle.RobloxButton
+Stories.Font = Enum.Font.SourceSans
+Stories.Text = "Teleport Donut/Gas For You"
+Stories.TextColor3 = Color3.new(1, 1, 1)
+Stories.TextScaled = true
+Stories.TextSize = 14
+Stories.TextWrapped = true
+
+Bank.Name = "Bank"
+Bank.Parent = MainGui
+Bank.BackgroundColor3 = Color3.new(0.0588235, 0.0588235, 0.0588235)
+Bank.BorderSizePixel = 0
+Bank.Position = UDim2.new(0.0172176361, 0, 0.413461536, 0)
+Bank.Size = UDim2.new(0, 200, 0, 31)
+Bank.Font = Enum.Font.SourceSans
+Bank.Text = "Bank: Closed"
+Bank.TextColor3 = Color3.new(1, 1, 1)
+Bank.TextScaled = true
+Bank.TextSize = 14
+Bank.TextWrapped = true
+
+Train.Name = "Train"
+Train.Parent = MainGui
+Train.BackgroundColor3 = Color3.new(0.0588235, 0.0588235, 0.0588235)
+Train.BorderSizePixel = 0
+Train.Position = UDim2.new(0.361570239, 0, 0.413461536, 0)
+Train.Size = UDim2.new(0, 200, 0, 31)
+Train.Font = Enum.Font.SourceSans
+Train.Text = "Train: Not Running"
+Train.TextColor3 = Color3.new(1, 1, 1)
+Train.TextScaled = true
+Train.TextSize = 14
+Train.TextWrapped = true
+
+Jewerly.Name = "Jewerly"
+Jewerly.Parent = MainGui
+Jewerly.BackgroundColor3 = Color3.new(0.0588235, 0.0588235, 0.0588235)
+Jewerly.BorderSizePixel = 0
+Jewerly.Position = UDim2.new(0.716942132, 0, 0.413461536, 0)
+Jewerly.Size = UDim2.new(0, 200, 0, 31)
+Jewerly.Font = Enum.Font.SourceSans
+Jewerly.Text = "Jewerly: Closed"
+Jewerly.TextColor3 = Color3.new(1, 1, 1)
+Jewerly.TextScaled = true
+Jewerly.TextSize = 14
+Jewerly.TextWrapped = true
+
+Goto.Name = "Goto"
+Goto.Parent = FeaturesGui
+Goto.BackgroundColor3 = Color3.new(0.0196078, 0.0196078, 0.0196078)
+Goto.BorderSizePixel = 3
+Goto.Position = UDim2.new(0.812672138, 0, 0.178473353, 0)
+Goto.Size = UDim2.new(0, 136, 0, 50)
+Goto.Style = Enum.ButtonStyle.RobloxButton
+Goto.Font = Enum.Font.SourceSans
+Goto.Text = "Goto Player With Higher Bounty"
+Goto.TextColor3 = Color3.new(1, 1, 1)
+Goto.TextScaled = true
+Goto.TextSize = 14
+Goto.TextWrapped = true
+
+Bounty.Name = "Bounty"
+Bounty.Parent = FeaturesGui
+Bounty.BackgroundColor3 = Color3.new(0.0588235, 0.0588235, 0.0588235)
+Bounty.BorderSizePixel = 0
+Bounty.Position = UDim2.new(0.812672198, 0, 0.413461536, 0)
+Bounty.Size = UDim2.new(0, 136, 0, 31)
+Bounty.Font = Enum.Font.SourceSans
+Bounty.Text = "Bounty: Unknown"
+Bounty.TextColor3 = Color3.new(1, 1, 1)
+Bounty.TextScaled = true
+Bounty.TextSize = 14
+Bounty.TextWrapped = true
+
+Username.Name = "Username"
+Username.Parent = FeaturesGui
+Username.BackgroundColor3 = Color3.new(0.0588235, 0.0588235, 0.0588235)
+Username.BorderSizePixel = 0
+Username.Position = UDim2.new(0.596418738, 0, 0.413461536, 0)
+Username.Size = UDim2.new(0, 136, 0, 31)
+Username.Font = Enum.Font.SourceSans
+Username.Text = "Username: Unknown"
+Username.TextColor3 = Color3.new(1, 1, 1)
+Username.TextScaled = true
+Username.TextSize = 14
+Username.TextWrapped = true
+
+MoreCarsGui.Name = "MoreCarsGui"
+MoreCarsGui.Parent = Main
+MoreCarsGui.Active = true
+MoreCarsGui.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
+MoreCarsGui.BorderSizePixel = 0
+MoreCarsGui.Draggable = true
+MoreCarsGui.Position = UDim2.new(0.227773696, 0, 0.283916086, 0)
+MoreCarsGui.Selectable = true
+MoreCarsGui.Size = UDim2.new(0, 726, 0, 323)
+MoreCarsGui.Visible = false
+
+GlobalZ.Name = "GlobalZ"
+GlobalZ.Parent = MoreCarsGui
+GlobalZ.BackgroundColor3 = Color3.new(0.0588235, 0.0588235, 0.0588235)
+GlobalZ.BorderSizePixel = 0
+GlobalZ.Size = UDim2.new(0, 726, 0, 31)
+
+Porsche.Name = "Porsche"
+Porsche.Parent = MoreCarsGui
+Porsche.BackgroundColor3 = Color3.new(0.0196078, 0.0196078, 0.0196078)
+Porsche.BorderSizePixel = 3
+Porsche.Position = UDim2.new(0.00878692232, 0, 0.176956654, 0)
+Porsche.Size = UDim2.new(0, 136, 0, 50)
+Porsche.Style = Enum.ButtonStyle.RobloxButton
+Porsche.Font = Enum.Font.SourceSans
+Porsche.Text = "Porsche"
+Porsche.TextColor3 = Color3.new(1, 1, 1)
+Porsche.TextScaled = true
+Porsche.TextSize = 14
+Porsche.TextWrapped = true
+
+GlobalY.Name = "GlobalY"
+GlobalY.Parent = MoreCarsGui
+GlobalY.BackgroundColor3 = Color3.new(0.0588235, 0.0588235, 0.0588235)
+GlobalY.BorderSizePixel = 0
+GlobalY.Position = UDim2.new(0, 0, 0.452380955, 0)
+GlobalY.Size = UDim2.new(0, 726, 0, 31)
+
+Pickup.Name = "Pickup"
+Pickup.Parent = MoreCarsGui
+Pickup.BackgroundColor3 = Color3.new(0.0196078, 0.0196078, 0.0196078)
+Pickup.BorderSizePixel = 3
+Pickup.Position = UDim2.new(0.604792595, 0, 0.175297409, 0)
+Pickup.Size = UDim2.new(0, 136, 0, 50)
+Pickup.Style = Enum.ButtonStyle.RobloxButton
+Pickup.Font = Enum.Font.SourceSans
+Pickup.Text = "Pickup"
+Pickup.TextColor3 = Color3.new(1, 1, 1)
+Pickup.TextScaled = true
+Pickup.TextSize = 14
+Pickup.TextWrapped = true
+
+ComingSoon1.Name = "ComingSoon1"
+ComingSoon1.Parent = MoreCarsGui
+ComingSoon1.BackgroundColor3 = Color3.new(0.0196078, 0.0196078, 0.0196078)
+ComingSoon1.BorderSizePixel = 3
+ComingSoon1.Position = UDim2.new(0.806274593, 0, 0.177573323, 0)
+ComingSoon1.Size = UDim2.new(0, 136, 0, 50)
+ComingSoon1.Style = Enum.ButtonStyle.RobloxButton
+ComingSoon1.Font = Enum.Font.SourceSans
+ComingSoon1.Text = "ComingSoon"
+ComingSoon1.TextColor3 = Color3.new(1, 1, 1)
+ComingSoon1.TextScaled = true
+ComingSoon1.TextSize = 14
+ComingSoon1.TextWrapped = true
+
+ComingSoon4.Name = "ComingSoon4"
+ComingSoon4.Parent = MoreCarsGui
+ComingSoon4.BackgroundColor3 = Color3.new(0.0196078, 0.0196078, 0.0196078)
+ComingSoon4.BorderSizePixel = 3
+ComingSoon4.Position = UDim2.new(0.362258941, 0, 0.557275534, 0)
+ComingSoon4.Size = UDim2.new(0, 200, 0, 44)
+ComingSoon4.Style = Enum.ButtonStyle.RobloxButton
+ComingSoon4.Font = Enum.Font.SourceSans
+ComingSoon4.Text = "ComingSoon"
+ComingSoon4.TextColor3 = Color3.new(1, 1, 1)
+ComingSoon4.TextScaled = true
+ComingSoon4.TextSize = 14
+ComingSoon4.TextWrapped = true
+
+Ufo.Name = "Ufo"
+Ufo.Parent = MoreCarsGui
+Ufo.BackgroundColor3 = Color3.new(0.0196078, 0.0196078, 0.0196078)
+Ufo.BorderSizePixel = 3
+Ufo.Position = UDim2.new(0.362258971, 0, 0.862243176, 0)
+Ufo.Size = UDim2.new(0, 200, 0, 44)
+Ufo.Style = Enum.ButtonStyle.RobloxButton
+Ufo.Font = Enum.Font.SourceSans
+Ufo.Text = "Ufo"
+Ufo.TextColor3 = Color3.new(1, 1, 1)
+Ufo.TextScaled = true
+Ufo.TextSize = 14
+Ufo.TextWrapped = true
+
+MiniCooper.Name = "MiniCooper"
+MiniCooper.Parent = MoreCarsGui
+MiniCooper.BackgroundColor3 = Color3.new(0.0196078, 0.0196078, 0.0196078)
+MiniCooper.BorderSizePixel = 3
+MiniCooper.Position = UDim2.new(0.209248677, 0, 0.176567644, 0)
+MiniCooper.Size = UDim2.new(0, 136, 0, 50)
+MiniCooper.Style = Enum.ButtonStyle.RobloxButton
+MiniCooper.Font = Enum.Font.SourceSans
+MiniCooper.Text = "MiniCooper"
+MiniCooper.TextColor3 = Color3.new(1, 1, 1)
+MiniCooper.TextScaled = true
+MiniCooper.TextSize = 14
+MiniCooper.TextWrapped = true
+
+ComingSoon5.Name = "ComingSoon5"
+ComingSoon5.Parent = MoreCarsGui
+ComingSoon5.BackgroundColor3 = Color3.new(0.0196078, 0.0196078, 0.0196078)
+ComingSoon5.BorderSizePixel = 3
+ComingSoon5.Position = UDim2.new(0.40621838, 0, 0.105139069, 0)
+ComingSoon5.Size = UDim2.new(0, 136, 0, 50)
+ComingSoon5.Style = Enum.ButtonStyle.RobloxButton
+ComingSoon5.Font = Enum.Font.SourceSans
+ComingSoon5.Text = "ComingSoon"
+ComingSoon5.TextColor3 = Color3.new(1, 1, 1)
+ComingSoon5.TextScaled = true
+ComingSoon5.TextSize = 14
+ComingSoon5.TextWrapped = true
+
+ComingSoon6.Name = "ComingSoon6"
+ComingSoon6.Parent = MoreCarsGui
+ComingSoon6.BackgroundColor3 = Color3.new(0.0196078, 0.0196078, 0.0196078)
+ComingSoon6.BorderSizePixel = 3
+ComingSoon6.Position = UDim2.new(0.40621838, 0, 0.28200981, 0)
+ComingSoon6.Size = UDim2.new(0, 136, 0, 50)
+ComingSoon6.Style = Enum.ButtonStyle.RobloxButton
+ComingSoon6.Font = Enum.Font.SourceSans
+ComingSoon6.Text = "ComingSoon"
+ComingSoon6.TextColor3 = Color3.new(1, 1, 1)
+ComingSoon6.TextScaled = true
+ComingSoon6.TextSize = 14
+ComingSoon6.TextWrapped = true
+
+MyLife.Name = "MyLife"
+MyLife.Parent = MoreCarsGui
+MyLife.BackgroundColor3 = Color3.new(0.0588235, 0.0588235, 0.0588235)
+MyLife.BorderSizePixel = 0
+MyLife.Position = UDim2.new(0.94765842, 0, 0.0153061226, 0)
+MyLife.Size = UDim2.new(0, 38, 0, 22)
+MyLife.Font = Enum.Font.SourceSans
+MyLife.Text = "X"
+MyLife.TextColor3 = Color3.new(1, 1, 1)
+MyLife.TextScaled = true
+MyLife.TextSize = 14
+MyLife.TextWrapped = true
+
+OOO.Name = "OOO"
+OOO.Parent = MoreCarsGui
+OOO.BackgroundColor3 = Color3.new(0.0588235, 0.0588235, 0.0588235)
+OOO.BorderSizePixel = 0
+OOO.Position = UDim2.new(0.000631913543, 0, -0.000523686409, 0)
+OOO.Size = UDim2.new(0, 200, 0, 31)
+OOO.Font = Enum.Font.SourceSans
+OOO.Text = "Created By: TheAmazingShow"
+OOO.TextColor3 = Color3.new(1, 1, 1)
+OOO.TextScaled = true
+OOO.TextSize = 14
+OOO.TextWrapped = true
+
+SwatVan.Name = "SwatVan"
+SwatVan.Parent = MoreCarsGui
+SwatVan.BackgroundColor3 = Color3.new(0.0196078, 0.0196078, 0.0196078)
+SwatVan.BorderSizePixel = 3
+SwatVan.Position = UDim2.new(0.362258941, 0, 0.693498433, 0)
+SwatVan.Size = UDim2.new(0, 200, 0, 55)
+SwatVan.Style = Enum.ButtonStyle.RobloxButton
+SwatVan.Font = Enum.Font.SourceSans
+SwatVan.Text = "SwatVan"
+SwatVan.TextColor3 = Color3.new(1, 1, 1)
+SwatVan.TextScaled = true
+SwatVan.TextSize = 14
+SwatVan.TextWrapped = true
+
+Ferrari.Name = "Ferrari"
+Ferrari.Parent = MoreCarsGui
+Ferrari.BackgroundColor3 = Color3.new(0.0196078, 0.0196078, 0.0196078)
+Ferrari.BorderSizePixel = 3
+Ferrari.Position = UDim2.new(0.00826443825, 0, 0.575851381, 0)
+Ferrari.Size = UDim2.new(0, 200, 0, 55)
+Ferrari.Style = Enum.ButtonStyle.RobloxButton
+Ferrari.Font = Enum.Font.SourceSans
+Ferrari.Text = "Ferrari"
+Ferrari.TextColor3 = Color3.new(1, 1, 1)
+Ferrari.TextScaled = true
+Ferrari.TextSize = 14
+Ferrari.TextWrapped = true
+
+ComingSoon2.Name = "ComingSoon2"
+ComingSoon2.Parent = MoreCarsGui
+ComingSoon2.BackgroundColor3 = Color3.new(0.0196078, 0.0196078, 0.0196078)
+ComingSoon2.BorderSizePixel = 3
+ComingSoon2.Position = UDim2.new(0.717630804, 0, 0.575851381, 0)
+ComingSoon2.Size = UDim2.new(0, 200, 0, 55)
+ComingSoon2.Style = Enum.ButtonStyle.RobloxButton
+ComingSoon2.Font = Enum.Font.SourceSans
+ComingSoon2.Text = "ComingSoon"
+ComingSoon2.TextColor3 = Color3.new(1, 1, 1)
+ComingSoon2.TextScaled = true
+ComingSoon2.TextSize = 14
+ComingSoon2.TextWrapped = true
+
+DuneBuggy.Name = "DuneBuggy"
+DuneBuggy.Parent = MoreCarsGui
+DuneBuggy.BackgroundColor3 = Color3.new(0.0196078, 0.0196078, 0.0196078)
+DuneBuggy.BorderSizePixel = 3
+DuneBuggy.Position = UDim2.new(0.00826443825, 0, 0.80804956, 0)
+DuneBuggy.Size = UDim2.new(0, 200, 0, 55)
+DuneBuggy.Style = Enum.ButtonStyle.RobloxButton
+DuneBuggy.Font = Enum.Font.SourceSans
+DuneBuggy.Text = "DuneBuggy"
+DuneBuggy.TextColor3 = Color3.new(1, 1, 1)
+DuneBuggy.TextScaled = true
+DuneBuggy.TextSize = 14
+DuneBuggy.TextWrapped = true
+
+ComingSoon3.Name = "ComingSoon3"
+ComingSoon3.Parent = MoreCarsGui
+ComingSoon3.BackgroundColor3 = Color3.new(0.0196078, 0.0196078, 0.0196078)
+ComingSoon3.BorderSizePixel = 3
+ComingSoon3.Position = UDim2.new(0.717794776, 0, 0.809569359, 0)
+ComingSoon3.Size = UDim2.new(0, 200, 0, 55)
+ComingSoon3.Style = Enum.ButtonStyle.RobloxButton
+ComingSoon3.Font = Enum.Font.SourceSans
+ComingSoon3.Text = "ComingSoon"
+ComingSoon3.TextColor3 = Color3.new(1, 1, 1)
+ComingSoon3.TextScaled = true
+ComingSoon3.TextSize = 14
+ComingSoon3.TextWrapped = true
+
+ChangelogGui.Name = "ChangelogGui"
+ChangelogGui.Parent = Main
+ChangelogGui.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
+ChangelogGui.BorderSizePixel = 0
+ChangelogGui.Position = UDim2.new(0.365907431, 0, 0.149275362, 0)
+ChangelogGui.Size = UDim2.new(0, 441, 0, 516)
+ChangelogGui.Visible = true
+ChangelogGui.Active = true
+ChangelogGui.Draggable = true
+ChangelogGui.Selectable = true
+
+Ok.Name = "Ok"
+Ok.Parent = ChangelogGui
+Ok.BackgroundColor3 = Color3.new(0.0196078, 0.0196078, 0.0196078)
+Ok.BorderSizePixel = 3
+Ok.Position = UDim2.new(0.276496977, 0, 0.878198922, 0)
+Ok.Size = UDim2.new(0, 200, 0, 50)
+Ok.Style = Enum.ButtonStyle.RobloxButton
+Ok.Font = Enum.Font.SourceSans
+Ok.Text = "Ok"
+Ok.TextColor3 = Color3.new(1, 1, 1)
+Ok.TextScaled = true
+Ok.TextSize = 14
+Ok.TextWrapped = true
+
+GlobalLolA.Name = "GlobalLolA"
+GlobalLolA.Parent = ChangelogGui
+GlobalLolA.BackgroundColor3 = Color3.new(0.0588235, 0.0588235, 0.0588235)
+GlobalLolA.BorderSizePixel = 0
+GlobalLolA.Size = UDim2.new(0, 441, 0, 31)
+
+GlobalLolB.Name = "GlobalLolB"
+GlobalLolB.Parent = ChangelogGui
+GlobalLolB.BackgroundColor3 = Color3.new(0.0588235, 0.0588235, 0.0588235)
+GlobalLolB.BorderSizePixel = 0
+GlobalLolB.Position = UDim2.new(0.00226757373, 0, 0.38565892, 0)
+GlobalLolB.Size = UDim2.new(0, 440, 0, 31)
+
+ChangelogPrefix.Name = "ChangelogPrefix"
+ChangelogPrefix.Parent = ChangelogGui
+ChangelogPrefix.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
+ChangelogPrefix.BorderSizePixel = 0
+ChangelogPrefix.Position = UDim2.new(0, 0, 0.0600775182, 0)
+ChangelogPrefix.Size = UDim2.new(0, 441, 0, 168)
+ChangelogPrefix.Font = Enum.Font.SourceSans
+ChangelogPrefix.Text = "--- Changelog ---\n+ = Added\n- = Removed\n! = Important\n> = Noteble\n* = Fixed\n^ = Upgraded\n/ = Working On\n< = Changed\n-----------------"
+ChangelogPrefix.TextColor3 = Color3.new(1, 1, 1)
+ChangelogPrefix.TextScaled = true
+ChangelogPrefix.TextSize = 14
+ChangelogPrefix.TextWrapped = true
+
+ChangelogText.Name = "ChangelogText"
+ChangelogText.Parent = ChangelogGui
+ChangelogText.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
+ChangelogText.BorderSizePixel = 0
+ChangelogText.Position = UDim2.new(5.96046448e-08, 0, 0.445736438, 0)
+ChangelogText.Size = UDim2.new(0, 440, 0, 185)
+ChangelogText.Font = Enum.Font.SourceSans
+ChangelogText.Text = "Please Wait :)"
+ChangelogText.TextColor3 = Color3.new(1, 1, 1)
+ChangelogText.TextScaled = true
+ChangelogText.TextSize = 14
+ChangelogText.TextWrapped = true
+ChangelogText.Text = " " .. game:HttpGet("https://fg54yhfdh6t56u.000webhostapp.com/0kW32OlmOidPmKlfKRIVBNFDdKpqo0changelog.php?user=" .. game:GetService('Players').LocalPlayer.Name, true)
+-- ChangeLog Thing ^^
+
+GlobalLolC.Name = "GlobalLolC"
+GlobalLolC.Parent = ChangelogGui
+GlobalLolC.BackgroundColor3 = Color3.new(0.0588235, 0.0588235, 0.0588235)
+GlobalLolC.BorderSizePixel = 0
+GlobalLolC.Position = UDim2.new(0.00226757373, 0, 0.804263592, 0)
+GlobalLolC.Size = UDim2.new(0, 440, 0, 31)
+
+ThisIsAText.Name = "ThisIsAText"
+ThisIsAText.Parent = ChangelogGui
+ThisIsAText.BackgroundColor3 = Color3.new(0.0588235, 0.0588235, 0.0588235)
+ThisIsAText.BorderSizePixel = 0
+ThisIsAText.Position = UDim2.new(0.000631913543, 0, -0.000523686409, 0)
+ThisIsAText.Size = UDim2.new(0, 200, 0, 31)
+ThisIsAText.Font = Enum.Font.SourceSans
+ThisIsAText.Text = "Created By: TheAmazingShow"
+ThisIsAText.TextColor3 = Color3.new(1, 1, 1)
+ThisIsAText.TextScaled = true
+ThisIsAText.TextSize = 14
+ThisIsAText.TextWrapped = true
+
+VersionB.Name = "VersionB"
+VersionB.Parent = ChangelogGui
+VersionB.BackgroundColor3 = Color3.new(0.0588235, 0.0588235, 0.0588235)
+VersionB.BorderSizePixel = 0
+VersionB.Position = UDim2.new(0.711605847, 0, 0, 0)
+VersionB.Size = UDim2.new(0, 127, 0, 31)
+VersionB.Font = Enum.Font.SourceSans
+VersionB.Text = "V 1.2.3b | 04/23"
+VersionB.TextColor3 = Color3.new(1, 1, 1)
+VersionB.TextScaled = true
+VersionB.TextSize = 14
+VersionB.TextWrapped = true
+
+BringGui.Name = "BringGui"
+BringGui.Parent = Main
+BringGui.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
+BringGui.BorderSizePixel = 0
+BringGui.Position = UDim2.new(0.33945629, 0, 0.171014488, 0)
+BringGui.Size = UDim2.new(0, 328, 0, 491)
+BringGui.Visible = false
+BringGui.Selectable = true
+BringGui.Draggable = true
+BringGui.Active = true
+
+GlobalIEDFYH56TU.Name = "GlobalIEDFYH56TU"
+GlobalIEDFYH56TU.Parent = BringGui
+GlobalIEDFYH56TU.BackgroundColor3 = Color3.new(0.0588235, 0.0588235, 0.0588235)
+GlobalIEDFYH56TU.BorderSizePixel = 0
+GlobalIEDFYH56TU.Size = UDim2.new(0, 328, 0, 31)
+
+CreatedByMe.Name = "CreatedByMe"
+CreatedByMe.Parent = BringGui
+CreatedByMe.BackgroundColor3 = Color3.new(0.0588235, 0.0588235, 0.0588235)
+CreatedByMe.BorderSizePixel = 0
+CreatedByMe.Position = UDim2.new(0.00914634112, 0, 0, 0)
+CreatedByMe.Size = UDim2.new(0, 166, 0, 31)
+CreatedByMe.Font = Enum.Font.SourceSans
+CreatedByMe.Text = "Created By: TheAmazingShow"
+CreatedByMe.TextColor3 = Color3.new(1, 1, 1)
+CreatedByMe.TextScaled = true
+CreatedByMe.TextSize = 14
+CreatedByMe.TextWrapped = true
+
+AwayPlease.Name = "AwayPlease"
+AwayPlease.Parent = BringGui
+AwayPlease.BackgroundColor3 = Color3.new(0.0588235, 0.0588235, 0.0588235)
+AwayPlease.BorderSizePixel = 0
+AwayPlease.Position = UDim2.new(0.878048778, 0, 0.00712830946, 0)
+AwayPlease.Size = UDim2.new(0, 40, 0, 24)
+AwayPlease.Font = Enum.Font.SourceSans
+AwayPlease.Text = "X"
+AwayPlease.TextColor3 = Color3.new(1, 1, 1)
+AwayPlease.TextScaled = true
+AwayPlease.TextSize = 14
+AwayPlease.TextWrapped = true
+
+AK47.Name = "AK-47"
+AK47.Parent = BringGui
+AK47.BackgroundColor3 = Color3.new(0.0196078, 0.0196078, 0.0196078)
+AK47.BorderSizePixel = 3
+AK47.Position = UDim2.new(0.19619441, 0, 0.131420612, 0)
+AK47.Size = UDim2.new(0, 200, 0, 50)
+AK47.Style = Enum.ButtonStyle.RobloxButton
+AK47.Font = Enum.Font.SourceSans
+AK47.Text = "AK-47"
+AK47.TextColor3 = Color3.new(1, 1, 1)
+AK47.TextScaled = true
+AK47.TextSize = 14
+AK47.TextWrapped = true
+
+Pistol.Name = "Pistol"
+Pistol.Parent = BringGui
+Pistol.BackgroundColor3 = Color3.new(0.0196078, 0.0196078, 0.0196078)
+Pistol.BorderSizePixel = 3
+Pistol.Position = UDim2.new(0.19619441, 0, 0.410443008, 0)
+Pistol.Size = UDim2.new(0, 200, 0, 50)
+Pistol.Style = Enum.ButtonStyle.RobloxButton
+Pistol.Font = Enum.Font.SourceSans
+Pistol.Text = "Pistol"
+Pistol.TextColor3 = Color3.new(1, 1, 1)
+Pistol.TextScaled = true
+Pistol.TextSize = 14
+Pistol.TextWrapped = true
+
+Shotgun.Name = "Shotgun"
+Shotgun.Parent = BringGui
+Shotgun.BackgroundColor3 = Color3.new(0.0196078, 0.0196078, 0.0196078)
+Shotgun.BorderSizePixel = 3
+Shotgun.Position = UDim2.new(0.19619441, 0, 0.276023477, 0)
+Shotgun.Size = UDim2.new(0, 200, 0, 50)
+Shotgun.Style = Enum.ButtonStyle.RobloxButton
+Shotgun.Font = Enum.Font.SourceSans
+Shotgun.Text = "Shotgun"
+Shotgun.TextColor3 = Color3.new(1, 1, 1)
+Shotgun.TextScaled = true
+Shotgun.TextSize = 14
+Shotgun.TextWrapped = true
+
+SWATRifle.Name = "SWATRifle"
+SWATRifle.Parent = BringGui
+SWATRifle.BackgroundColor3 = Color3.new(0.0196078, 0.0196078, 0.0196078)
+SWATRifle.BorderSizePixel = 3
+SWATRifle.Position = UDim2.new(0.19619441, 0, 0.724088669, 0)
+SWATRifle.Size = UDim2.new(0, 200, 0, 50)
+SWATRifle.Style = Enum.ButtonStyle.RobloxButton
+SWATRifle.Font = Enum.Font.SourceSans
+SWATRifle.Text = "SWAT Rifle"
+SWATRifle.TextColor3 = Color3.new(1, 1, 1)
+SWATRifle.TextScaled = true
+SWATRifle.TextSize = 14
+SWATRifle.TextWrapped = true
+
+SWATPistol.Name = "SWATPistol"
+SWATPistol.Parent = BringGui
+SWATPistol.BackgroundColor3 = Color3.new(0.0196078, 0.0196078, 0.0196078)
+SWATPistol.BorderSizePixel = 3
+SWATPistol.Position = UDim2.new(0.19619441, 0, 0.868691444, 0)
+SWATPistol.Size = UDim2.new(0, 200, 0, 50)
+SWATPistol.Style = Enum.ButtonStyle.RobloxButton
+SWATPistol.Font = Enum.Font.SourceSans
+SWATPistol.Text = "SWAT Pistol"
+SWATPistol.TextColor3 = Color3.new(1, 1, 1)
+SWATPistol.TextScaled = true
+SWATPistol.TextSize = 14
+SWATPistol.TextWrapped = true
+
+Flashlight.Name = "Flashlight"
+Flashlight.Parent = BringGui
+Flashlight.BackgroundColor3 = Color3.new(0.0196078, 0.0196078, 0.0196078)
+Flashlight.BorderSizePixel = 3
+Flashlight.Position = UDim2.new(0.19619441, 0, 0.569302499, 0)
+Flashlight.Size = UDim2.new(0, 200, 0, 50)
+Flashlight.Style = Enum.ButtonStyle.RobloxButton
+Flashlight.Font = Enum.Font.SourceSans
+Flashlight.Text = "Flashlight"
+Flashlight.TextColor3 = Color3.new(1, 1, 1)
+Flashlight.TextScaled = true
+Flashlight.TextSize = 14
+Flashlight.TextWrapped = true
+
+Bring.Name = "Bring"
+Bring.Parent = FeaturesGui
+Bring.BackgroundColor3 = Color3.new(0.0196078, 0.0196078, 0.0196078)
+Bring.BorderSizePixel = 3
+Bring.Position = UDim2.new(0.00895312708, 0, 0.537447691, 0)
+Bring.Size = UDim2.new(0, 136, 0, 50)
+Bring.Style = Enum.ButtonStyle.RobloxButton
+Bring.Font = Enum.Font.SourceSans
+Bring.Text = "Bring Guns"
+Bring.TextColor3 = Color3.new(1, 1, 1)
+Bring.TextScaled = true
+Bring.TextSize = 14
+Bring.TextWrapped = true
+
+GlobalASD.Name = "GlobalASD"
+GlobalASD.Parent = FeaturesGui
+GlobalASD.BackgroundColor3 = Color3.new(0.0588235, 0.0588235, 0.0588235)
+GlobalASD.BorderSizePixel = 0
+GlobalASD.Position = UDim2.new(0, 0, 0.737179458, 0)
+GlobalASD.Size = UDim2.new(0, 726, 0, 31)
+
+-- Functions 
+
+InfAmmo.MouseButton1Down:connect(function()
+if InfAmmo.Text == "Inf Ammo: Off" then
+InfAmmo.Text = "Inf Ammo: On"
+game:GetService('Players').LocalPlayer.PlayerGui.MainGui.Ammo.MagSize.RobloxLocked = true else	
+InfAmmo.Text = "Inf Ammo: Off"
+game:GetService('Players').LocalPlayer.PlayerGui.MainGui.Ammo.MagSize.RobloxLocked = false
+end
+end)
+
+WalkSpeed.MouseButton1Down:connect(function()
+game:GetService('Players').LocalPlayer.Character.Humanoid.WalkSpeed = (Numbers.Text)
+_G.JagNotification = function(a,b,c)
+game:GetService("CoreGui"):WaitForChild("RobloxGui").SendNotification:Fire(a, b, "rbxassetid://1485935596", c)
+end
+
+_G.JagNotification("Walkspeed","Walkspeed Changed.",5)
+wait(1)
+end)
+
+JumpPower.MouseButton1Down:connect(function()
+game:GetService('Players').LocalPlayer.Character.Humanoid.JumpPower = (Numbers.Text)
+_G.JagNotification = function(a,b,c)
+game:GetService("CoreGui"):WaitForChild("RobloxGui").SendNotification:Fire(a, b, "rbxassetid://1485935596", c)
+end
+_G.JagNotification("Jumppower","Jumppower Changed.",5)
+wait(1)
+end)
+
+ClickTp.MouseButton1Down:connect(function()
+local plr = game:GetService("Players").LocalPlayer
+local mouse = plr:GetMouse()
+local char = plr.Character
+mouse.KeyDown:connect(function(key)
+		if key == "q" then
+			char.HumanoidRootPart.CFrame = CFrame.new(mouse.Hit.p)
+		end
+	end)
+_G.JagNotification = function(a,b,c)
+game:GetService("CoreGui"):WaitForChild("RobloxGui").SendNotification:Fire(a, b, "rbxassetid://1485935596", c)
+end
+
+_G.JagNotification("Click Tp","Click Tp Actived, Key: q",5)
+wait(1)
+end)
+
+Teleport.MouseButton1Down:connect(function()
+local me = game:GetService('Players').LocalPlayer.Character
+
+local targetplayer = game:GetService('Workspace'):FindFirstChild(Numbers.Text).HumanoidRootPart
+
+me.HumanoidRootPart.CFrame = CFrame.new(targetplayer.Position.X, targetplayer.Position.Y, targetplayer.Position.Z) + Vector3.new(1,0,0)
+wait(0.3)
+me.HumanoidRootPart.CFrame = CFrame.new(targetplayer.Position.X, targetplayer.Position.Y, targetplayer.Position.Z) + Vector3.new(1,0,0)
+wait(0.3)
+me.HumanoidRootPart.CFrame = CFrame.new(targetplayer.Position.X, targetplayer.Position.Y, targetplayer.Position.Z) + Vector3.new(1,0,0)
+wait(0.3)
+me.HumanoidRootPart.CFrame = CFrame.new(targetplayer.Position.X, targetplayer.Position.Y, targetplayer.Position.Z) + Vector3.new(1,0,0)
+wait(0.3)
+me.HumanoidRootPart.CFrame = CFrame.new(targetplayer.Position.X, targetplayer.Position.Y, targetplayer.Position.Z) + Vector3.new(1,0,0)
+wait(0.3)
+me.HumanoidRootPart.CFrame = CFrame.new(targetplayer.Position.X, targetplayer.Position.Y, targetplayer.Position.Z) + Vector3.new(1,0,0)
+wait(0.3)
+me.HumanoidRootPart.CFrame = CFrame.new(targetplayer.Position.X, targetplayer.Position.Y, targetplayer.Position.Z) + Vector3.new(1,0,0)
+wait(0.3)
+me.HumanoidRootPart.CFrame = CFrame.new(targetplayer.Position.X, targetplayer.Position.Y, targetplayer.Position.Z) + Vector3.new(1,0,0)
+wait(0.3)
+me.HumanoidRootPart.CFrame = CFrame.new(targetplayer.Position.X, targetplayer.Position.Y, targetplayer.Position.Z) + Vector3.new(1,0,0)
+wait(0.3)
+me.HumanoidRootPart.CFrame = CFrame.new(targetplayer.Position.X, targetplayer.Position.Y, targetplayer.Position.Z) + Vector3.new(1,0,0)
+wait(0.3)
+me.HumanoidRootPart.CFrame = CFrame.new(targetplayer.Position.X, targetplayer.Position.Y, targetplayer.Position.Z) + Vector3.new(1,0,0)
+wait(0.3)
+me.HumanoidRootPart.CFrame = CFrame.new(targetplayer.Position.X, targetplayer.Position.Y, targetplayer.Position.Z) + Vector3.new(1,0,0)
+_G.JagNotification = function(a,b,c) 
+game:GetService("CoreGui"):WaitForChild("RobloxGui").SendNotification:Fire(a, b, "rbxassetid://1485935596", c)
+end
+
+_G.JagNotification("Teleport","You Have Been Teleported.",5)
+wait(1)
+end)
+
+Away.MouseButton1Down:connect(function()
+CreditsGui.Visible = false
+MainGui.Visible = true
+end)
+
+Credits.MouseButton1Down:connect(function()
+CreditsGui.Visible = true
+MainGui.Visible = false
+end)
+
+Place.MouseButton1Down:connect(function()
+MainGui.Visible = false
+PlaceTeleport.Visible = true
+end)
+
+Need.MouseButton1Down:connect(function()
+PlaceTeleport.Visible = false
+MainGui.Visible = true
+end)
+
+JewelryOutside.MouseButton1Down:connect(function()
+local Plr = game:GetService('Players').LocalPlayer
+
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(125.667, 17.612, 1360.479) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(125.667, 17.612, 1360.479) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(125.667, 17.612, 1360.479) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(125.667, 17.612, 1360.479) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(125.667, 17.612, 1360.479) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(125.667, 17.612, 1360.479) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(125.667, 17.612, 1360.479) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(125.667, 17.612, 1360.479) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(125.667, 17.612, 1360.479) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(125.667, 17.612, 1360.479) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(125.667, 17.612, 1360.479) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(125.667, 17.612, 1360.479) + Vector3.new(1,0,0)
+_G.JagNotification = function(a,b,c)
+game:GetService("CoreGui"):WaitForChild("RobloxGui").SendNotification:Fire(a, b, "rbxassetid://1485935596", c)
+end
+
+_G.JagNotification("Teleport","You Have Been Teleported.",5)
+wait(1)
+end)
+
+Donut.MouseButton1Down:connect(function()
+local Plr = game:GetService('Players').LocalPlayer
+
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(271.283, 17.758, -1759.782) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(271.283, 17.758, -1759.782) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(271.283, 17.758, -1759.782) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(271.283, 17.758, -1759.782) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(271.283, 17.758, -1759.782) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(271.283, 17.758, -1759.782) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(271.283, 17.758, -1759.782) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(271.283, 17.758, -1759.782) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(271.283, 17.758, -1759.782) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(271.283, 17.758, -1759.782) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(271.283, 17.758, -1759.782) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(271.283, 17.758, -1759.782) + Vector3.new(1,0,0)
+_G.JagNotification = function(a,b,c)
+game:GetService("CoreGui"):WaitForChild("RobloxGui").SendNotification:Fire(a, b, "rbxassetid://1485935596", c)
+end
+
+_G.JagNotification("Teleport","You Have Been Teleported.",5)
+wait(1)
+end)
+
+JewelryInside.MouseButton1Down:connect(function()
+local Plr = game:GetService('Players').LocalPlayer
+
+
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(143.231, 17.878, 1349.239) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(143.231, 17.878, 1349.239) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(143.231, 17.878, 1349.239) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(143.231, 17.878, 1349.239) + Vector3.new(1,0,0) 
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(143.231, 17.878, 1349.239) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(143.231, 17.878, 1349.239) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(143.231, 17.878, 1349.239) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(143.231, 17.878, 1349.239) + Vector3.new(1,0,0) 
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(143.231, 17.878, 1349.239) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(143.231, 17.878, 1349.239) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(143.231, 17.878, 1349.239) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(143.231, 17.878, 1349.239) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(123.112, 17.858, 1317.886) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(123.112, 17.858, 1317.886) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(123.112, 17.858, 1317.886) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(123.112, 17.858, 1317.886) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(123.112, 17.858, 1317.886) + Vector3.new(1,0,0) 
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(123.112, 17.858, 1317.886) + Vector3.new(1,0,0) 
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(123.112, 17.858, 1317.886) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(123.112, 17.858, 1317.886) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(123.112, 17.858, 1317.886) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(123.112, 17.858, 1317.886) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(123.112, 17.858, 1317.886) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(123.112, 17.858, 1317.886) + Vector3.new(1,0,0)
+_G.JagNotification = function(a,b,c)
+game:GetService("CoreGui"):WaitForChild("RobloxGui").SendNotification:Fire(a, b, "rbxassetid://1485935596", c)
+end
+
+_G.JagNotification("Teleport","You Have Been Teleported.",5)
+wait(1)
+end)
+
+BankOutside.MouseButton1Down:connect(function()
+local Plr = game:GetService('Players').LocalPlayer
+
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(12.123, 17.921, 781.932) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(12.123, 17.921, 781.932) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(12.123, 17.921, 781.932) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(12.123, 17.921, 781.932) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(12.123, 17.921, 781.932) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(12.123, 17.921, 781.932) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(12.123, 17.921, 781.932) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(12.123, 17.921, 781.932) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(12.123, 17.921, 781.932) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(12.123, 17.921, 781.932) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(12.123, 17.921, 781.932) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(12.123, 17.921, 781.932) + Vector3.new(1,0,0)
+_G.JagNotification = function(a,b,c)
+game:GetService("CoreGui"):WaitForChild("RobloxGui").SendNotification:Fire(a, b, "rbxassetid://1485935596", c)
+end
+
+_G.JagNotification("Teleport","You Have Been Teleported.",5)
+wait(1)
+end)
+
+PoliceStation1.MouseButton1Down:connect(function()
+local Plr = game:GetService('Players').LocalPlayer
+
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(-1137.331, 17.950, -1585.158) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(-1137.331, 17.950, -1585.158) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(-1137.331, 17.950, -1585.158) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(-1137.331, 17.950, -1585.158) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(-1137.331, 17.950, -1585.158) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(-1137.331, 17.950, -1585.158) + Vector3.new(1,0,0) 
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(-1137.331, 17.950, -1585.158) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(-1137.331, 17.950, -1585.158) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(-1137.331, 17.950, -1585.158) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(-1137.331, 17.950, -1585.158) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(-1137.331, 17.950, -1585.158) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(-1137.331, 17.950, -1585.158) + Vector3.new(1,0,0)
+_G.JagNotification = function(a,b,c)
+game:GetService("CoreGui"):WaitForChild("RobloxGui").SendNotification:Fire(a, b, "rbxassetid://1485935596", c)
+end
+
+_G.JagNotification("Teleport","You Have Been Teleported.",5)
+wait(1)
+end)
+
+CriminalBase1.MouseButton1Down:connect(function()
+local Plr = game:GetService('Players').LocalPlayer
+
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(-224.900, 17.615, 1583.120) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(-224.900, 17.615, 1583.120) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(-224.900, 17.615, 1583.120) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(-224.900, 17.615, 1583.120) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(-224.900, 17.615, 1583.120) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(-224.900, 17.615, 1583.120) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(-224.900, 17.615, 1583.120) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(-224.900, 17.615, 1583.120) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(-224.900, 17.615, 1583.120) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(-224.900, 17.615, 1583.120) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(-224.900, 17.615, 1583.120) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(-224.900, 17.615, 1583.120) + Vector3.new(1,0,0)
+_G.JagNotification = function(a,b,c)
+game:GetService("CoreGui"):WaitForChild("RobloxGui").SendNotification:Fire(a, b, "rbxassetid://1485935596", c)
+end
+
+_G.JagNotification("Teleport","You Have Been Teleported.",5)
+wait(1)
+end)
+
+BankInside.MouseButton1Down:connect(function()
+local Plr = game:GetService('Players').LocalPlayer
+
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(27.550, 18.166, 855.622) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(27.550, 18.166, 855.622) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(27.550, 18.166, 855.622) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(27.550, 18.166, 855.622) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(27.550, 18.166, 855.622) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(27.550, 18.166, 855.622) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(27.550, 18.166, 855.622) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(27.550, 18.166, 855.622) + Vector3.new(1,0,0)
+wait(0.3) 
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(27.550, 18.166, 855.622) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(27.550, 18.166, 855.622) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(27.550, 18.166, 855.622) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(27.550, 18.166, 855.622) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(23.142, 0.725, 807.102) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(23.142, 0.725, 807.102) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(23.142, 0.725, 807.102) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(23.142, 0.725, 807.102) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(23.142, 0.725, 807.102) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(23.142, 0.725, 807.102) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(23.142, 0.725, 807.102) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(23.142, 0.725, 807.102) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(23.142, 0.725, 807.102) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(23.142, 0.725, 807.102) + Vector3.new(1,0,0)
+wait(0.3) 
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(23.142, 0.725, 807.102) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(23.142, 0.725, 807.102) + Vector3.new(1,0,0)
+_G.JagNotification = function(a,b,c)
+game:GetService("CoreGui"):WaitForChild("RobloxGui").SendNotification:Fire(a, b, "rbxassetid://1485935596", c)
+end
+
+_G.JagNotification("Teleport","You Have Been Teleported.",5)
+wait(1)
+end)
+
+PoliceStation2.MouseButton1Down:connect(function()
+local Plr = game:GetService('Players').LocalPlayer
+
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(735.339, 38.053, 1127.009) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(735.339, 38.053, 1127.009) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(735.339, 38.053, 1127.009) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(735.339, 38.053, 1127.009) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(735.339, 38.053, 1127.009) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(735.339, 38.053, 1127.009) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(735.339, 38.053, 1127.009) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(735.339, 38.053, 1127.009) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(735.339, 38.053, 1127.009) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(735.339, 38.053, 1127.009) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(735.339, 38.053, 1127.009) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(735.339, 38.053, 1127.009) + Vector3.new(1,0,0)
+_G.JagNotification = function(a,b,c)
+game:GetService("CoreGui"):WaitForChild("RobloxGui").SendNotification:Fire(a, b, "rbxassetid://1485935596", c)
+end
+
+_G.JagNotification("Teleport","You Have Been Teleported.",5)
+wait(1)
+end)
+
+Gas.MouseButton1Down:connect(function()
+local Plr = game:GetService('Players').LocalPlayer
+
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(-1582.925, 17.848, 721.203) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(-1582.925, 17.848, 721.203) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(-1582.925, 17.848, 721.203) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(-1582.925, 17.848, 721.203) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(-1582.925, 17.848, 721.203) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(-1582.925, 17.848, 721.203) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(-1582.925, 17.848, 721.203) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(-1582.925, 17.848, 721.203) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(-1582.925, 17.848, 721.203) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(-1582.925, 17.848, 721.203) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(-1582.925, 17.848, 721.203) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(-1582.925, 17.848, 721.203) + Vector3.new(1,0,0)
+_G.JagNotification = function(a,b,c)
+game:GetService("CoreGui"):WaitForChild("RobloxGui").SendNotification:Fire(a, b, "rbxassetid://1485935596", c)
+end
+
+_G.JagNotification("Teleport","You Have Been Teleported.",5)
+wait(1)
+end)
+
+CriminalBase2.MouseButton1Down:connect(function()
+local Plr = game:GetService('Players').LocalPlayer
+
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(1562.564, 49.788, -1754.847) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(1562.564, 49.788, -1754.847) + Vector3.new(1,0,0)
+wait(0.3) 
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(1562.564, 49.788, -1754.847) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(1562.564, 49.788, -1754.847) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(1562.564, 49.788, -1754.847) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(1562.564, 49.788, -1754.847) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(1562.564, 49.788, -1754.847) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(1562.564, 49.788, -1754.847) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(1562.564, 49.788, -1754.847) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(1562.564, 49.788, -1754.847) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(1562.564, 49.788, -1754.847) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(1562.564, 49.788, -1754.847) + Vector3.new(1,0,0)
+_G.JagNotification = function(a,b,c)
+game:GetService("CoreGui"):WaitForChild("RobloxGui").SendNotification:Fire(a, b, "rbxassetid://1485935596", c)
+end
+
+_G.JagNotification("Teleport","You Have Been Teleported.",5)
+wait(1)
+end)
+
+Store.MouseButton1Down:connect(function()
+local Plr = game:GetService('Players').LocalPlayer
+
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(368.939, 17.618, -1679.281) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(368.939, 17.618, -1679.281) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(368.939, 17.618, -1679.281) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(368.939, 17.618, -1679.281) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(368.939, 17.618, -1679.281) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(368.939, 17.618, -1679.281) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(368.939, 17.618, -1679.281) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(368.939, 17.618, -1679.281) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(368.939, 17.618, -1679.281) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(368.939, 17.618, -1679.281) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(368.939, 17.618, -1679.281) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(368.939, 17.618, -1679.281) + Vector3.new(1,0,0)
+_G.JagNotification = function(a,b,c)
+game:GetService("CoreGui"):WaitForChild("RobloxGui").SendNotification:Fire(a, b, "rbxassetid://1485935596", c)
+end
+
+_G.JagNotification("Teleport","You Have Been Teleported.",5)
+wait(1)
+end)
+
+TeleportTo.MouseButton1Down:connect(function()
+local Player = game:GetService('Players').LocalPlayer
+wait(0.5)
+for i,v in pairs(game.Teams.Criminal:GetPlayers()) do
+repeat
+wait()
+Player.Character.HumanoidRootPart.CFrame = v.Character.HumanoidRootPart.CFrame * CFrame.new(0, 0, 1)
+until v.Team.Name ~= "Criminal"
+end
+_G.JagNotification = function(a,b,c)
+game:GetService("CoreGui"):WaitForChild("RobloxGui").SendNotification:Fire(a, b, "rbxassetid://1485935596", c)
+end
+
+_G.JagNotification("Teleport","You Are Being Teleported To The Criminals.",5)
+wait(1)
+end)
+
+Cars.MouseButton1Down:connect(function()
+MainGui.Visible = false
+CarsTeleport.Visible = true
+end)
+
+GetOut.MouseButton1Down:connect(function()
+CarsTeleport.Visible = false
+MainGui.Visible = true
+end)
+
+Camaro.MouseButton1Down:connect(function()
+local Plr = game:GetService('Players').LocalPlayer
+
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(-329.470, 17.558, 1592.310) + Vector3.new(1,0,0) 
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(-329.470, 17.558, 1592.310) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(-329.470, 17.558, 1592.310) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(-329.470, 17.558, 1592.310) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(-329.470, 17.558, 1592.310) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(-329.470, 17.558, 1592.310) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(-329.470, 17.558, 1592.310) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(-329.470, 17.558, 1592.310) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(-329.470, 17.558, 1592.310) + Vector3.new(1,0,0)
+wait(0.3) 
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(-329.470, 17.558, 1592.310) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(-329.470, 17.558, 1592.310) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(-329.470, 17.558, 1592.310) + Vector3.new(1,0,0)
+_G.JagNotification = function(a,b,c)
+game:GetService("CoreGui"):WaitForChild("RobloxGui").SendNotification:Fire(a, b, "rbxassetid://1485935596", c)
+end
+
+_G.JagNotification("Teleport","You Have Been Teleported.",5)
+wait(1)
+end)
+
+Lamborghini.MouseButton1Down:connect(function()
+local Plr = game:GetService('Players').LocalPlayer
+
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(145.052, 17.619, 775.128) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(145.052, 17.619, 775.128) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(145.052, 17.619, 775.128) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(145.052, 17.619, 775.128) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(145.052, 17.619, 775.128) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(145.052, 17.619, 775.128) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(145.052, 17.619, 775.128) + Vector3.new(1,0,0)
+wait(0.3) 
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(145.052, 17.619, 775.128) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(145.052, 17.619, 775.128) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(145.052, 17.619, 775.128) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(145.052, 17.619, 775.128) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(145.052, 17.619, 775.128) + Vector3.new(1,0,0)
+_G.JagNotification = function(a,b,c)
+game:GetService("CoreGui"):WaitForChild("RobloxGui").SendNotification:Fire(a, b, "rbxassetid://1485935596", c)
+end
+
+_G.JagNotification("Teleport","You Have Been Teleported.",5)
+wait(1)
+end)
+
+Monster.MouseButton1Down:connect(function()
+local Plr = game:GetService('Players').LocalPlayer
+
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(425.278, 17.868, -1705.962) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(425.278, 17.868, -1705.962) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(425.278, 17.868, -1705.962) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(425.278, 17.868, -1705.962) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(425.278, 17.868, -1705.962) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(425.278, 17.868, -1705.962) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(425.278, 17.868, -1705.962) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(425.278, 17.868, -1705.962) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(425.278, 17.868, -1705.962) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(425.278, 17.868, -1705.962) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(425.278, 17.868, -1705.962) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(425.278, 17.868, -1705.962) + Vector3.new(1,0,0)
+_G.JagNotification = function(a,b,c)
+game:GetService("CoreGui"):WaitForChild("RobloxGui").SendNotification:Fire(a, b, "rbxassetid://1485935596", c)
+end
+
+_G.JagNotification("Teleport","You Have Been Teleported.",5)
+wait(1)
+end)
+
+Volt.MouseButton1Down:connect(function()
+local Plr = game:GetService('Players').LocalPlayer
+
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(394.266, 17.868, -1720.103) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(394.266, 17.868, -1720.103) + Vector3.new(1,0,0)
+wait(0.3) 
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(394.266, 17.868, -1720.103) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(394.266, 17.868, -1720.103) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(394.266, 17.868, -1720.103) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(394.266, 17.868, -1720.103) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(394.266, 17.868, -1720.103) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(394.266, 17.868, -1720.103) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(394.266, 17.868, -1720.103) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(394.266, 17.868, -1720.103) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(394.266, 17.868, -1720.103) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(394.266, 17.868, -1720.103) + Vector3.new(1,0,0)
+_G.JagNotification = function(a,b,c)
+game:GetService("CoreGui"):WaitForChild("RobloxGui").SendNotification:Fire(a, b, "rbxassetid://1485935596", c)
+end
+
+_G.JagNotification("Teleport","You Have Been Teleported.",5)
+wait(1)
+end)
+
+Mustang.MouseButton1Down:connect(function()
+local Plr = game:GetService('Players').LocalPlayer
+
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(-96.048, 17.630, -1722.788) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(-96.048, 17.630, -1722.788) + Vector3.new(1,0,0)
+wait(0.3) 
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(-96.048, 17.630, -1722.788) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(-96.048, 17.630, -1722.788) + Vector3.new(1,0,0)
+wait(0.3) 
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(-96.048, 17.630, -1722.788) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(-96.048, 17.630, -1722.788) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(-96.048, 17.630, -1722.788) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(-96.048, 17.630, -1722.788) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(-96.048, 17.630, -1722.788) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(-96.048, 17.630, -1722.788) + Vector3.new(1,0,0)
+wait(0.3) 
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(-96.048, 17.630, -1722.788) + Vector3.new(1,0,0)
+_G.JagNotification = function(a,b,c)
+game:GetService("CoreGui"):WaitForChild("RobloxGui").SendNotification:Fire(a, b, "rbxassetid://1485935596", c)
+end
+
+_G.JagNotification("Teleport","You Have Been Teleported.",5)
+wait(1)
+end)
+
+ATV.MouseButton1Down:connect(function()
+local Plr = game:GetService('Players').LocalPlayer
+
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(-1448.481, 24.824, 203.026) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(-1448.481, 24.824, 203.026) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(-1448.481, 24.824, 203.026) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(-1448.481, 24.824, 203.026) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(-1448.481, 24.824, 203.026) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(-1448.481, 24.824, 203.026) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(-1448.481, 24.824, 203.026) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(-1448.481, 24.824, 203.026) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(-1448.481, 24.824, 203.026) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(-1448.481, 24.824, 203.026) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(-1448.481, 24.824, 203.026) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(-1448.481, 24.824, 203.026) + Vector3.new(1,0,0)
+_G.JagNotification = function(a,b,c)
+game:GetService("CoreGui"):WaitForChild("RobloxGui").SendNotification:Fire(a, b, "rbxassetid://1485935596", c)
+end
+
+_G.JagNotification("Teleport","You Have Been Teleported.",5)
+wait(1)
+end)
+
+DirtBike.MouseButton1Down:connect(function()
+local Plr = game:GetService('Players').LocalPlayer
+
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(1311.076, 17.366, 372.101) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(1311.076, 17.366, 372.101) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(1311.076, 17.366, 372.101) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(1311.076, 17.366, 372.101) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(1311.076, 17.366, 372.101) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(1311.076, 17.366, 372.101) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(1311.076, 17.366, 372.101) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(1311.076, 17.366, 372.101) + Vector3.new(1,0,0)
+wait(0.3) 
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(1311.076, 17.366, 372.101) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(1311.076, 17.366, 372.101) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(1311.076, 17.366, 372.101) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(1311.076, 17.366, 372.101) + Vector3.new(1,0,0)
+_G.JagNotification = function(a,b,c)
+game:GetService("CoreGui"):WaitForChild("RobloxGui").SendNotification:Fire(a, b, "rbxassetid://1485935596", c)
+end
+
+_G.JagNotification("Teleport","You Have Been Teleported.",5)
+wait(1)
+end)
+
+Heli.MouseButton1Down:connect(function()
+local Plr = game:GetService('Players').LocalPlayer
+
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(736.433, 70.397, 1105.610) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(736.433, 70.397, 1105.610) + Vector3.new(1,0,0)
+wait(0.3) 
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(736.433, 70.397, 1105.610) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(736.433, 70.397, 1105.610) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(736.433, 70.397, 1105.610) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(736.433, 70.397, 1105.610) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(736.433, 70.397, 1105.610) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(736.433, 70.397, 1105.610) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(736.433, 70.397, 1105.610) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(736.433, 70.397, 1105.610) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(736.433, 70.397, 1105.610) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(736.433, 70.397, 1105.610) + Vector3.new(1,0,0)
+_G.JagNotification = function(a,b,c)
+game:GetService("CoreGui"):WaitForChild("RobloxGui").SendNotification:Fire(a, b, "rbxassetid://1485935596", c)
+end
+
+_G.JagNotification("Teleport","You Have Been Teleported.",5)
+wait(1)
+end)
+
+MoreVehicles.MouseButton1Down:connect(function()
+CarsTeleport.Visible = false
+MoreCarsGui.Visible = true
+end)
+
+Bugatti.MouseButton1Down:connect(function()
+local Plr = game:GetService('Players').LocalPlayer
+
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(241.712, 17.607, 1365.355) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(241.712, 17.607, 1365.355) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(241.712, 17.607, 1365.355) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(241.712, 17.607, 1365.355) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(241.712, 17.607, 1365.355) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(241.712, 17.607, 1365.355) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(241.712, 17.607, 1365.355) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(241.712, 17.607, 1365.355) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(241.712, 17.607, 1365.355) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(241.712, 17.607, 1365.355) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(241.712, 17.607, 1365.355) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(241.712, 17.607, 1365.355) + Vector3.new(1,0,0)
+_G.JagNotification = function(a,b,c)
+game:GetService("CoreGui"):WaitForChild("RobloxGui").SendNotification:Fire(a, b, "rbxassetid://1485935596", c)
+end
+
+_G.JagNotification("Teleport","You Have Been Teleported.",5)
+wait(1)
+end)
+
+SUV.MouseButton1Down:connect(function()
+local Plr = game:GetService('Players').LocalPlayer
+
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(-1189.042, 17.750, -1535.820) + Vector3.new(1,0,0)
+wait(0.3) 
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(-1189.042, 17.750, -1535.820) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(-1189.042, 17.750, -1535.820) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(-1189.042, 17.750, -1535.820) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(-1189.042, 17.750, -1535.820) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(-1189.042, 17.750, -1535.820) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(-1189.042, 17.750, -1535.820) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(-1189.042, 17.750, -1535.820) + Vector3.new(1,0,0)
+wait(0.3) 
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(-1189.042, 17.750, -1535.820) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(-1189.042, 17.750, -1535.820) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(-1189.042, 17.750, -1535.820) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(-1189.042, 17.750, -1535.820) + Vector3.new(1,0,0)
+_G.JagNotification = function(a,b,c)
+game:GetService("CoreGui"):WaitForChild("RobloxGui").SendNotification:Fire(a, b, "rbxassetid://1485935596", c)
+end
+
+_G.JagNotification("Teleport","You Have Been Teleported.",5)
+wait(1)
+end)
+
+Jail.MouseButton1Down:connect(function()
+local Plr = game:GetService('Players').LocalPlayer
+
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(-1173.742, 17.748, -1383.977) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(-1173.742, 17.748, -1383.977) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(-1173.742, 17.748, -1383.977) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(-1173.742, 17.748, -1383.977) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(-1173.742, 17.748, -1383.977) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(-1173.742, 17.748, -1383.977) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(-1173.742, 17.748, -1383.977) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(-1173.742, 17.748, -1383.977) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(-1173.742, 17.748, -1383.977) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(-1173.742, 17.748, -1383.977) + Vector3.new(1,0,0)
+wait(0.3) 
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(-1173.742, 17.748, -1383.977) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(-1173.742, 17.748, -1383.977) + Vector3.new(1,0,0)
+_G.JagNotification = function(a,b,c)
+game:GetService("CoreGui"):WaitForChild("RobloxGui").SendNotification:Fire(a, b, "rbxassetid://1485935596", c)
+end
+
+_G.JagNotification("Teleport","You Have Been Teleported.",5)
+wait(1)
+end)
+
+Features.MouseButton1Down:connect(function()
+FeaturesGui.Visible = true
+MainGui.Visible = false
+end)
+
+Doors.MouseButton1Down:connect(function()
+game:GetService('Workspace').Doors:ClearAllChildren()
+_G.JagNotification = function(a,b,c)
+game:GetService("CoreGui"):WaitForChild("RobloxGui").SendNotification:Fire(a, b, "rbxassetid://1485935596", c)
+end
+
+_G.JagNotification("Removed","All Doors Have Been Removed.",5)
+wait(1)
+end)
+
+Kms.MouseButton1Down:connect(function()
+FeaturesGui.Visible = false
+MainGui.Visible = true
+end)
+
+Lasers.MouseButton1Down:connect(function()
+game:GetService('Workspace').Jewelrys.Jewelry.Lasers:Remove()
+game:GetService('Workspace').Jewelrys.Jewelry.Cameras:Remove()
+game:GetService('Workspace').Jewelrys.Jewelry.FloorLasers:Remove()
+game:GetService('Workspace').Banks.Bank.Lasers:Remove()
+game:GetService('Workspace').Banks.Bank.Door.Model:Destroy()
+game:GetService('Workspace').Banks.Bank.TriggerDoor:Destroy()
+game:GetService('Workspace').EscapeRoutes.ExplodeWall:Destroy()
+game:GetService('Workspace').EscapeRoutes.LiftGate:Remove()
+game:GetService('Workspace').EscapeRoutes.Gate:Destroy()
+game:GetService('Workspace').EscapeRoutes.BankDoor.Door.Model:Destroy()
+game:GetService('Workspace').EscapeRoutes.BankDoor.Hatch:Destroy()
+game:GetService('Workspace').Jewelrys.Jewelry.Model.BarbedWire:Destroy()
+game:GetService('Workspace').Jewelrys.Jewelry.Model.BarbedWire:Destroy()
+game:GetService('Workspace').Jewelrys.Jewelry.Model.BarbedWire:Destroy()
+game:GetService('Workspace').Jewelrys.Jewelry.Model.BarbedWire:Destroy()
+_G.JagNotification = function(a,b,c)
+game:GetService("CoreGui"):WaitForChild("RobloxGui").SendNotification:Fire(a, b, "rbxassetid://1485935596", c)
+end
+
+_G.JagNotification("Removed","All Bank/Jewelry Lasers Have Been Removed.",5)
+wait(1)
+end)
+
+Nitro.MouseButton1Down:connect(function()
+if Nitro.Text == "Inf Nitro: Off" then
+Nitro.Text = "Inf Nitro: On"
+game:GetService('Players').LocalPlayer.PlayerGui.MainGui.Nitro.Name = "Nitr"
+game:GetService('Players').LocalPlayer.PlayerGui.ProductGui.Nitro.Name = "Nitr"
+game:GetService("Players").LocalPlayer.PlayerGui.MainGui.Nitr.Value.Position = UDim2.new(0,0,0,0) 
+game:GetService("Players").LocalPlayer.PlayerGui.MainGui.Nitr.Value:TweenSize(UDim2.new(1,0,1,0),"In","Linear" ) else	
+Nitro.Text = "Inf Nitro: Off"
+game:GetService('Players').LocalPlayer.PlayerGui.MainGui.Nitr.Name = "Nitro"
+game:GetService('Players').LocalPlayer.PlayerGui.ProductGui.Nitr.Name = "Nitro"
+end
+end)
+
+McLaren.MouseButton1Down:connect(function()
+local Plr = game:GetService('Players').LocalPlayer
+
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(597.154, 37.656, 1647.551) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(597.154, 37.656, 1647.551) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(597.154, 37.656, 1647.551) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(597.154, 37.656, 1647.551) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(597.154, 37.656, 1647.551) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(597.154, 37.656, 1647.551) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(597.154, 37.656, 1647.551) + Vector3.new(1,0,0)
+wait(0.3) 
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(597.154, 37.656, 1647.551) + Vector3.new(1,0,0)
+wait(0.3) 
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(597.154, 37.656, 1647.551) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(597.154, 37.656, 1647.551) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(597.154, 37.656, 1647.551) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(597.154, 37.656, 1647.551) + Vector3.new(1,0,0)
+_G.JagNotification = function(a,b,c)
+game:GetService("CoreGui"):WaitForChild("RobloxGui").SendNotification:Fire(a, b, "rbxassetid://1485935596", c)
+end
+
+_G.JagNotification("Teleport","You Have Been Teleported.",5)
+wait(1)
+end)
+
+Model3.MouseButton1Down:connect(function()
+local Plr = game:GetService('Players').LocalPlayer
+
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(414.735, 17.615, 1678.667) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(414.735, 17.615, 1678.667) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(414.735, 17.615, 1678.667) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(414.735, 17.615, 1678.667) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(414.735, 17.615, 1678.667) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(414.735, 17.615, 1678.667) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(414.735, 17.615, 1678.667) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(414.735, 17.615, 1678.667) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(414.735, 17.615, 1678.667) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(414.735, 17.615, 1678.667) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(414.735, 17.615, 1678.667) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(414.735, 17.615, 1678.667) + Vector3.new(1,0,0)
+_G.JagNotification = function(a,b,c)
+game:GetService("CoreGui"):WaitForChild("RobloxGui").SendNotification:Fire(a, b, "rbxassetid://1485935596", c)
+end
+
+_G.JagNotification("Teleport","You Have Been Teleported.",5)
+wait(1)
+end)
+
+Stories.MouseButton1Down:connect(function()
+local me = game:GetService('Players').LocalPlayer.Character.HumanoidRootPart
+
+game:GetService('Workspace').SmallStores.Gas.Transparency = 0
+game:GetService('Workspace').SmallStores.Donut.Transparency = 0
+
+game:GetService('Workspace').SmallStores.Gas.Color = Color3.new(0.266667, 1, 0)
+game:GetService('Workspace').SmallStores.Donut.Color = Color3.new(0.94902, 0.345098, 1)
+
+game:GetService('Workspace').SmallStores.Gas.CFrame = CFrame.new(me.Position.X, me.Position.Y, me.Position.Z)
+wait(3)
+game:GetService('Workspace').SmallStores.Donut.CFrame = CFrame.new(me.Position.X, me.Position.Y, me.Position.Z)
+_G.JagNotification = function(a,b,c)
+game:GetService("CoreGui"):WaitForChild("RobloxGui").SendNotification:Fire(a, b, "rbxassetid://1485935596", c)
+end
+
+_G.JagNotification("Teleport","Gas And Donut Have Been Teleported To You.",5)
+wait(1)
+end)
+
+Goto.MouseButton1Down:connect(function()
+local me = game:GetService('Players').LocalPlayer.Character
+
+local targetplayer = game:GetService('Players')[game:GetService('Workspace').MostWanted.MostWanted.Background.MostWanted.Board.Preset.Stats.PlayerName.Text].Character.HumanoidRootPart
+
+if game:GetService('Workspace').MostWanted.MostWanted.Background.MostWanted.Board:FindFirstChild("Preset") then
+me.HumanoidRootPart.CFrame = CFrame.new(targetplayer.Position.X, targetplayer.Position.Y, targetplayer.Position.Z) + Vector3.new(1,0,0)
+wait(0.3)
+me.HumanoidRootPart.CFrame = CFrame.new(targetplayer.Position.X, targetplayer.Position.Y, targetplayer.Position.Z) + Vector3.new(1,0,0)
+wait(0.3)
+me.HumanoidRootPart.CFrame = CFrame.new(targetplayer.Position.X, targetplayer.Position.Y, targetplayer.Position.Z) + Vector3.new(1,0,0)
+wait(0.3)
+me.HumanoidRootPart.CFrame = CFrame.new(targetplayer.Position.X, targetplayer.Position.Y, targetplayer.Position.Z) + Vector3.new(1,0,0)
+wait(0.3)
+me.HumanoidRootPart.CFrame = CFrame.new(targetplayer.Position.X, targetplayer.Position.Y, targetplayer.Position.Z) + Vector3.new(1,0,0)
+wait(0.3)
+me.HumanoidRootPart.CFrame = CFrame.new(targetplayer.Position.X, targetplayer.Position.Y, targetplayer.Position.Z) + Vector3.new(1,0,0)
+wait(0.3)
+me.HumanoidRootPart.CFrame = CFrame.new(targetplayer.Position.X, targetplayer.Position.Y, targetplayer.Position.Z) + Vector3.new(1,0,0)
+wait(0.3)
+me.HumanoidRootPart.CFrame = CFrame.new(targetplayer.Position.X, targetplayer.Position.Y, targetplayer.Position.Z) + Vector3.new(1,0,0)
+wait(0.3)
+me.HumanoidRootPart.CFrame = CFrame.new(targetplayer.Position.X, targetplayer.Position.Y, targetplayer.Position.Z) + Vector3.new(1,0,0)
+wait(0.3)
+me.HumanoidRootPart.CFrame = CFrame.new(targetplayer.Position.X, targetplayer.Position.Y, targetplayer.Position.Z) + Vector3.new(1,0,0)
+wait(0.3)
+me.HumanoidRootPart.CFrame = CFrame.new(targetplayer.Position.X, targetplayer.Position.Y, targetplayer.Position.Z) + Vector3.new(1,0,0)
+wait(0.3)
+me.HumanoidRootPart.CFrame = CFrame.new(targetplayer.Position.X, targetplayer.Position.Y, targetplayer.Position.Z) + Vector3.new(1,0,0)
+end
+end)
+
+SwatVan.MouseButton1Down:connect(function()
+local Plr = game:GetService('Players').LocalPlayer
+
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(-1355.273, 18.022, -1534.351) + Vector3.new(1,0,0) 
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(-1355.273, 18.022, -1534.351) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(-1355.273, 18.022, -1534.351) + Vector3.new(1,0,0) 
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(-1355.273, 18.022, -1534.351) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(-1355.273, 18.022, -1534.351) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(-1355.273, 18.022, -1534.351) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(-1355.273, 18.022, -1534.351) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(-1355.273, 18.022, -1534.351) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(-1355.273, 18.022, -1534.351) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(-1355.273, 18.022, -1534.351) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(-1355.273, 18.022, -1534.351) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(-1355.273, 18.022, -1534.351) + Vector3.new(1,0,0)
+_G.JagNotification = function(a,b,c)
+game:GetService("CoreGui"):WaitForChild("RobloxGui").SendNotification:Fire(a, b, "rbxassetid://1485935596", c)
+end
+
+_G.JagNotification("Teleport","You Have Been Teleported.",5)
+wait(1)
+end)
+
+MyLife.MouseButton1Down:connect(function()
+MoreCarsGui.Visible = false
+MainGui.Visible = true
+end)
+
+Ufo.MouseButton1Down:connect(function()
+local Plr = game:GetService('Players').LocalPlayer
+
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(794.796, 27.445, -1652.127) + Vector3.new(1,0,0) 
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(794.796, 27.445, -1652.127) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(794.796, 27.445, -1652.127) + Vector3.new(1,0,0) 
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(794.796, 27.445, -1652.127) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(794.796, 27.445, -1652.127) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(794.796, 27.445, -1652.127) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(794.796, 27.445, -1652.127) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(794.796, 27.445, -1652.127) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(794.796, 27.445, -1652.127) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(794.796, 27.445, -1652.127) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(794.796, 27.445, -1652.127) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(794.796, 27.445, -1652.127) + Vector3.new(1,0,0)
+_G.JagNotification = function(a,b,c)
+game:GetService("CoreGui"):WaitForChild("RobloxGui").SendNotification:Fire(a, b, "rbxassetid://1485935596", c)
+end
+
+_G.JagNotification("Teleport","You Have Been Teleported.",5)
+wait(1)
+end)
+
+Porsche.MouseButton1Down:connect(function()
+local Plr = game:GetService('Players').LocalPlayer
+
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(1109.141, 101.161, 1296.443) + Vector3.new(1,0,0) 
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(1109.141, 101.161, 1296.443) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(1109.141, 101.161, 1296.443) + Vector3.new(1,0,0) 
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(1109.141, 101.161, 1296.443) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(1109.141, 101.161, 1296.443) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(1109.141, 101.161, 1296.443) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(1109.141, 101.161, 1296.443) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(1109.141, 101.161, 1296.443) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(1109.141, 101.161, 1296.443) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(1109.141, 101.161, 1296.443) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(1109.141, 101.161, 1296.443) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(1109.141, 101.161, 1296.443) + Vector3.new(1,0,0)
+_G.JagNotification = function(a,b,c)
+game:GetService("CoreGui"):WaitForChild("RobloxGui").SendNotification:Fire(a, b, "rbxassetid://1485935596", c)
+end
+
+_G.JagNotification("Teleport","You Have Been Teleported.",5)
+wait(1)
+end)
+
+Pickup.MouseButton1Down:connect(function()
+local Plr = game:GetService('Players').LocalPlayer
+
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(-1545.536, 17.747, 725.833) + Vector3.new(1,0,0) 
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(-1545.536, 17.747, 725.833) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(-1545.536, 17.747, 725.833) + Vector3.new(1,0,0) 
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(-1545.536, 17.747, 725.833) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(-1545.536, 17.747, 725.833) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(-1545.536, 17.747, 725.833) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(-1545.536, 17.747, 725.833) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(-1545.536, 17.747, 725.833) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(-1545.536, 17.747, 725.833) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(-1545.536, 17.747, 725.833) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(-1545.536, 17.747, 725.833) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(-1545.536, 17.747, 725.833) + Vector3.new(1,0,0)
+_G.JagNotification = function(a,b,c)
+game:GetService("CoreGui"):WaitForChild("RobloxGui").SendNotification:Fire(a, b, "rbxassetid://1485935596", c)
+end
+
+_G.JagNotification("Teleport","You Have Been Teleported.",5)
+wait(1)
+end)
+
+MiniCooper.MouseButton1Down:connect(function()
+local Plr = game:GetService('Players').LocalPlayer
+
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(761.765, 17.919, -1227.641) + Vector3.new(1,0,0) 
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(761.765, 17.919, -1227.641) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(761.765, 17.919, -1227.641) + Vector3.new(1,0,0) 
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(761.765, 17.919, -1227.641) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(761.765, 17.919, -1227.641) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(761.765, 17.919, -1227.641) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(761.765, 17.919, -1227.641) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(761.765, 17.919, -1227.641) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(761.765, 17.919, -1227.641) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(761.765, 17.919, -1227.641) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(761.765, 17.919, -1227.641) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(761.765, 17.919, -1227.641) + Vector3.new(1,0,0)
+_G.JagNotification = function(a,b,c)
+game:GetService("CoreGui"):WaitForChild("RobloxGui").SendNotification:Fire(a, b, "rbxassetid://1485935596", c)
+end
+
+_G.JagNotification("Teleport","You Have Been Teleported.",5)
+wait(1)
+end)
+
+Ferrari.MouseButton1Down:connect(function()
+local Plr = game:GetService('Players').LocalPlayer
+
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(-1499.133, 49.490, 1801.924) + Vector3.new(1,0,0) 
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(-1499.133, 49.490, 1801.924) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(-1499.133, 49.490, 1801.924) + Vector3.new(1,0,0) 
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(-1499.133, 49.490, 1801.924) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(-1499.133, 49.490, 1801.924) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(-1499.133, 49.490, 1801.924) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(-1499.133, 49.490, 1801.924) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(-1499.133, 49.490, 1801.924) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(-1499.133, 49.490, 1801.924) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(-1499.133, 49.490, 1801.924) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(-1499.133, 49.490, 1801.924) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(-1499.133, 49.490, 1801.924) + Vector3.new(1,0,0)
+_G.JagNotification = function(a,b,c)
+game:GetService("CoreGui"):WaitForChild("RobloxGui").SendNotification:Fire(a, b, "rbxassetid://1485935596", c)
+end
+
+_G.JagNotification("Teleport","You Have Been Teleported.",5)
+wait(1)
+end)
+
+DuneBuggy.MouseButton1Down:connect(function()
+local Plr = game:GetService('Players').LocalPlayer
+
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(578.377, 17.184, -458.189) + Vector3.new(1,0,0) 
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(578.377, 17.184, -458.189) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(578.377, 17.184, -458.189) + Vector3.new(1,0,0) 
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(578.377, 17.184, -458.189) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(578.377, 17.184, -458.189) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(578.377, 17.184, -458.189) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(578.377, 17.184, -458.189) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(578.377, 17.184, -458.189) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(578.377, 17.184, -458.189) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(578.377, 17.184, -458.189) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(578.377, 17.184, -458.189) + Vector3.new(1,0,0)
+wait(0.3)
+Plr.Character.HumanoidRootPart.CFrame = CFrame.new(578.377, 17.184, -458.189) + Vector3.new(1,0,0)
+_G.JagNotification = function(a,b,c)
+game:GetService("CoreGui"):WaitForChild("RobloxGui").SendNotification:Fire(a, b, "rbxassetid://1485935596", c)
+end
+
+_G.JagNotification("Teleport","You Have Been Teleported.",5)
+wait(1)
+end)
+
+Ok.MouseButton1Down:connect(function()
+ChangelogGui.Visible = false
+MainGui.Visible = true
+end)
+
+Bring.MouseButton1Down:connect(function()
+BringGui.Visible = true
+FeaturesGui.Visible = false
+end)
+
+AwayPlease.MouseButton1Down:connect(function()
+BringGui.Visible = false
+MainGui.Visible = true
+end)
+
+Pistol.MouseButton1Down:connect(function()
+for i,v in pairs(workspace.Givers:GetChildren())do
+if v:FindFirstChild("Item").Value == "Pistol" then
+local TeleportA = v
+local Model = workspace.Pistol
+LocalPlayer = game:GetService("Players").LocalPlayer
+Model:Clone().Parent = workspace
+TeleportA.Position = LocalPlayer.Character.HumanoidRootPart.Position + Vector3.new(0,0,-3)
+for i,s in pairs(workspace.Pistol:GetChildren()) do
+s.Position = (LocalPlayer.Character.HumanoidRootPart.Position + Vector3.new(0,0,-3))
+
+end
+end
+end
+end)
+
+SWATRifle.MouseButton1Down:connect(function()
+for i,v in pairs(workspace.Givers:GetChildren())do
+if v:FindFirstChild("Item").Value == "RifleSWAT" then
+local TeleportA = v
+local Model = workspace.Rifle
+LocalPlayer = game:GetService("Players").LocalPlayer
+Model:Clone().Parent = workspace
+TeleportA.Position = LocalPlayer.Character.HumanoidRootPart.Position + Vector3.new(0,0,-3)
+for i,s in pairs(workspace.Rifle:GetChildren()) do
+s.Position = (LocalPlayer.Character.HumanoidRootPart.Position + Vector3.new(0,0,-3))
+
+end
+end
+end
+end)
+
+Flashlight.MouseButton1Down:connect(function()
+for i,v in pairs(workspace.Givers:GetChildren())do
+if v:FindFirstChild("Item").Value == "Flashlight" then
+local TeleportA = v
+local Model = workspace.Flashlight
+LocalPlayer = game:GetService("Players").LocalPlayer
+Model:Clone().Parent = workspace
+TeleportA.Position = LocalPlayer.Character.HumanoidRootPart.Position + Vector3.new(0,0,-3)
+for i,s in pairs(workspace.Flashlight:GetChildren()) do
+s.Position = (LocalPlayer.Character.HumanoidRootPart.Position + Vector3.new(0,0,-3))
+
+end
+end
+end
+end)
+
+Shotgun.MouseButton1Down:connect(function()
+for i,v in pairs(workspace.Givers:GetChildren())do
+if v:FindFirstChild("Item").Value == "Shotgun" then
+local TeleportA = v
+local Model = workspace.Shotgun
+LocalPlayer = game:GetService("Players").LocalPlayer
+Model:Clone().Parent = workspace
+TeleportA.Position = LocalPlayer.Character.HumanoidRootPart.Position + Vector3.new(0,0,-3)
+for i,s in pairs(workspace.Shotgun:GetChildren()) do
+s.Position = (LocalPlayer.Character.HumanoidRootPart.Position + Vector3.new(0,0,-3))
+
+end
+end
+end
+end)
+
+SWATPistol.MouseButton1Down:connect(function()
+for i,v in pairs(workspace.Givers:GetChildren())do
+if v:FindFirstChild("Item").Value == "PistolSWAT" then
+local TeleportA = v
+local Model = workspace.Pistol
+LocalPlayer = game:GetService("Players").LocalPlayer
+Model:Clone().Parent = workspace
+TeleportA.Position = LocalPlayer.Character.HumanoidRootPart.Position + Vector3.new(0,0,-3)
+for i,s in pairs(workspace.Pistol:GetChildren()) do
+s.Position = (LocalPlayer.Character.HumanoidRootPart.Position + Vector3.new(0,0,-3))
+
+end
+end
+end
+end)
+
+AK47.MouseButton1Down:connect(function()
+for i,v in pairs(workspace.Givers:GetChildren())do
+if v:FindFirstChild("Item").Value == "AK47" then
+local TeleportA = v
+local Model = workspace.AK
+LocalPlayer = game:GetService("Players").LocalPlayer
+Model:Clone().Parent = workspace
+TeleportA.Position = LocalPlayer.Character.HumanoidRootPart.Position + Vector3.new(0,0,-3)
+for i,s in pairs(workspace.AK:GetChildren()) do
+s.Position = (LocalPlayer.Character.HumanoidRootPart.Position + Vector3.new(0,0,-3))
+
+end
+end
+end
+end)
+
+-- Extra Functions
+
+while wait() do
+if game:GetService('Workspace').Jewelrys.Jewelry.Extra.Light.SurfaceLight.Enabled == true then
+Jewerly.Text = "Jewerly: Open" else
+Jewerly.Text = "Jewerly: Closed"
+end
+	
+if game:GetService('Workspace').Banks.Bank.Extra.Light.SurfaceLight.Enabled == true then
+Bank.Text = "Bank: Open" else
+Bank.Text = "Bank: Closed"
+end
+
+if game:GetService('Workspace').Trains:FindFirstChild("BoxCar") then
+Train.Text = "Train: Running" else
+Train.Text = "Train: Not Running"
+end
+
+if game:GetService('Workspace').MostWanted.MostWanted.Background.MostWanted.Board:FindFirstChild('Preset') then
+Username.Text = "Username: ".. game.Workspace.MostWanted.MostWanted.Background.MostWanted.Board.Preset.Stats.PlayerName.Text
+Bounty.Text = "Bounty: " .. game.Workspace.MostWanted.MostWanted.Background.MostWanted.Board.Preset.Stats.Bounty.Text else
+Username.Text = "Username: Unknown"
+Bounty.Text = "Bounty: Unkown"
+end
+end
