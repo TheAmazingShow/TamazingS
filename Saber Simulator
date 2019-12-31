@@ -1,0 +1,583 @@
+-- Instances:
+
+local Yeetus = Instance.new("ScreenGui")
+local Frame = Instance.new("ImageLabel")
+local Credits = Instance.new("TextLabel")
+local TextButton = Instance.new("TextButton")
+local Background = Instance.new("ImageLabel")
+local Scripts = Instance.new("TextLabel")
+local Frame_2 = Instance.new("Frame")
+local AutoKing = Instance.new("TextButton")
+local BossKiller = Instance.new("TextButton")
+local CoinGrabber = Instance.new("TextButton")
+local Walkspeed = Instance.new("TextBox")
+local JumpPower = Instance.new("TextBox")
+local Local = Instance.new("TextLabel")
+local Gravity = Instance.new("TextBox")
+local AutoFarm = Instance.new("TextButton")
+local Background_2 = Instance.new("ImageLabel")
+local TextButton_2 = Instance.new("TextButton")
+local Tps = Instance.new("TextLabel")
+local Frame_3 = Instance.new("Frame")
+local CrownShop = Instance.new("TextButton")
+local Reward = Instance.new("TextButton")
+local Sell = Instance.new("TextButton")
+local Shop = Instance.new("TextButton")
+local Spawns = Instance.new("TextButton")
+local Background_3 = Instance.new("ImageLabel")
+local TextButton_3 = Instance.new("TextButton")
+
+--Properties:
+
+Yeetus.Name = "Yeetus"
+Yeetus.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+Frame.Name = "Frame"
+Frame.Parent = Yeetus
+Frame.Active = true
+Frame.BackgroundColor3 = Color3.new(0.188235, 0.188235, 0.188235)
+Frame.BackgroundTransparency = 1
+Frame.Position = UDim2.new(0.375096083, 0, 0.200860828, 0)
+Frame.Selectable = true
+Frame.Size = UDim2.new(0, 440, 0, 316)
+Frame.ZIndex = 0
+Frame.Image = "rbxassetid://3570695787"
+Frame.ImageColor3 = Color3.new(0.27451, 0.27451, 0.27451)
+Frame.ScaleType = Enum.ScaleType.Slice
+Frame.SliceCenter = Rect.new(100, 100, 100, 100)
+
+Credits.Name = "Credits"
+Credits.Parent = Frame
+Credits.Active = true
+Credits.BackgroundColor3 = Color3.new(0.172549, 0.172549, 0.172549)
+Credits.BackgroundTransparency = 1
+Credits.BorderColor3 = Color3.new(0, 0, 0)
+Credits.BorderSizePixel = 0
+Credits.Position = UDim2.new(0.02678084, 0, 0.833122909, 0)
+Credits.Selectable = true
+Credits.Size = UDim2.new(0, 179, 0, 43)
+Credits.ZIndex = 3
+Credits.Font = Enum.Font.SourceSans
+Credits.Text = "Credits"
+Credits.TextColor3 = Color3.new(0, 0, 0)
+Credits.TextScaled = true
+Credits.TextSize = 14
+Credits.TextWrapped = true
+
+TextButton.Parent = Credits
+TextButton.BackgroundColor3 = Color3.new(1, 1, 1)
+TextButton.BackgroundTransparency = 1
+TextButton.Position = UDim2.new(-0.0413443297, 0, 0.0237114485, 0)
+TextButton.Size = UDim2.new(0, 198, 0, 51)
+TextButton.ZIndex = 2
+TextButton.Font = Enum.Font.SourceSans
+TextButton.Text = " "
+TextButton.TextColor3 = Color3.new(0, 0, 0)
+TextButton.TextScaled = true
+TextButton.TextSize = 14
+TextButton.TextWrapped = true
+
+Background.Name = "Background"
+Background.Parent = Credits
+Background.Active = true
+Background.BackgroundColor3 = Color3.new(0.188235, 0.188235, 0.188235)
+Background.BackgroundTransparency = 1
+Background.Position = UDim2.new(-0.0413443297, 0, 0.0237115361, 0)
+Background.Size = UDim2.new(0, 198, 0, 52)
+Background.Image = "rbxassetid://3570695787"
+Background.ImageColor3 = Color3.new(0.176471, 0.176471, 0.176471)
+Background.ScaleType = Enum.ScaleType.Slice
+Background.SliceCenter = Rect.new(100, 100, 100, 100)
+
+Scripts.Name = "Scripts"
+Scripts.Parent = Frame
+Scripts.Active = true
+Scripts.BackgroundColor3 = Color3.new(0.172549, 0.172549, 0.172549)
+Scripts.BackgroundTransparency = 1
+Scripts.BorderColor3 = Color3.new(0, 0, 0)
+Scripts.BorderSizePixel = 0
+Scripts.Position = UDim2.new(0.0327510498, 0, 0.044415243, 0)
+Scripts.Selectable = true
+Scripts.Size = UDim2.new(0, 179, 0, 43)
+Scripts.ZIndex = 2
+Scripts.Font = Enum.Font.SourceSans
+Scripts.Text = "Scripts"
+Scripts.TextColor3 = Color3.new(0, 0, 0)
+Scripts.TextScaled = true
+Scripts.TextSize = 14
+Scripts.TextWrapped = true
+
+Frame_2.Parent = Scripts
+Frame_2.Active = true
+Frame_2.BackgroundColor3 = Color3.new(0, 0, 0)
+Frame_2.BorderSizePixel = 0
+Frame_2.Position = UDim2.new(1.0454545, 0, 4.76837158e-07, 0)
+Frame_2.Selectable = true
+Frame_2.Size = UDim2.new(0, 210, 0, 293)
+
+AutoKing.Name = "AutoKing"
+AutoKing.Parent = Frame_2
+AutoKing.BackgroundColor3 = Color3.new(0.172549, 0.172549, 0.172549)
+AutoKing.BorderSizePixel = 0
+AutoKing.Position = UDim2.new(0.0519523844, 0, 0.270017207, 0)
+AutoKing.Size = UDim2.new(0, 190, 0, 30)
+AutoKing.Modal = true
+AutoKing.Font = Enum.Font.SourceSans
+AutoKing.Text = "Auto King"
+AutoKing.TextColor3 = Color3.new(0.470588, 0.470588, 0.470588)
+AutoKing.TextScaled = true
+AutoKing.TextSize = 14
+AutoKing.TextWrapped = true
+
+BossKiller.Name = "BossKiller"
+BossKiller.Parent = Frame_2
+BossKiller.BackgroundColor3 = Color3.new(0.172549, 0.172549, 0.172549)
+BossKiller.BorderSizePixel = 0
+BossKiller.Position = UDim2.new(0.0519523844, 0, 0.0253438856, 0)
+BossKiller.Size = UDim2.new(0, 190, 0, 30)
+BossKiller.Modal = true
+BossKiller.Font = Enum.Font.SourceSans
+BossKiller.Text = "Auto Boss"
+BossKiller.TextColor3 = Color3.new(0.470588, 0.470588, 0.470588)
+BossKiller.TextScaled = true
+BossKiller.TextSize = 14
+BossKiller.TextWrapped = true
+
+CoinGrabber.Name = "CoinGrabber"
+CoinGrabber.Parent = Frame_2
+CoinGrabber.BackgroundColor3 = Color3.new(0.172549, 0.172549, 0.172549)
+CoinGrabber.BorderSizePixel = 0
+CoinGrabber.Position = UDim2.new(0.0519523844, 0, 0.149307802, 0)
+CoinGrabber.Size = UDim2.new(0, 190, 0, 30)
+CoinGrabber.Modal = true
+CoinGrabber.Font = Enum.Font.SourceSans
+CoinGrabber.Text = "Auto Coin"
+CoinGrabber.TextColor3 = Color3.new(0.470588, 0.470588, 0.470588)
+CoinGrabber.TextScaled = true
+CoinGrabber.TextSize = 14
+CoinGrabber.TextWrapped = true
+
+Walkspeed.Name = "Walkspeed"
+Walkspeed.Parent = Frame_2
+Walkspeed.BackgroundColor3 = Color3.new(0.172549, 0.172549, 0.172549)
+Walkspeed.BorderSizePixel = 0
+Walkspeed.Position = UDim2.new(0.0523809567, 0, 0.661201537, 0)
+Walkspeed.Size = UDim2.new(0, 190, 0, 30)
+Walkspeed.Font = Enum.Font.SourceSans
+Walkspeed.PlaceholderColor3 = Color3.new(0, 0, 0)
+Walkspeed.PlaceholderText = "Type Walkspeed"
+Walkspeed.Text = ""
+Walkspeed.TextColor3 = Color3.new(0, 0, 0)
+Walkspeed.TextScaled = true
+Walkspeed.TextSize = 14
+Walkspeed.TextWrapped = true
+
+JumpPower.Name = "JumpPower"
+JumpPower.Parent = Frame_2
+JumpPower.BackgroundColor3 = Color3.new(0.172549, 0.172549, 0.172549)
+JumpPower.BorderSizePixel = 0
+JumpPower.Position = UDim2.new(0.0523809567, 0, 0.762008965, 0)
+JumpPower.Size = UDim2.new(0, 190, 0, 30)
+JumpPower.Font = Enum.Font.SourceSans
+JumpPower.PlaceholderColor3 = Color3.new(0, 0, 0)
+JumpPower.PlaceholderText = "Type JumpPower"
+JumpPower.Text = ""
+JumpPower.TextColor3 = Color3.new(0, 0, 0)
+JumpPower.TextScaled = true
+JumpPower.TextSize = 14
+JumpPower.TextWrapped = true
+
+Local.Name = "Local"
+Local.Parent = Frame_2
+Local.Active = true
+Local.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
+Local.BorderSizePixel = 0
+Local.Position = UDim2.new(0, 0, 0.522593915, 0)
+Local.Selectable = true
+Local.Size = UDim2.new(0, 210, 0, 31)
+Local.Font = Enum.Font.SourceSans
+Local.Text = "Local"
+Local.TextColor3 = Color3.new(0, 1, 0)
+Local.TextScaled = true
+Local.TextSize = 14
+Local.TextStrokeColor3 = Color3.new(0, 1, 0)
+Local.TextWrapped = true
+
+Gravity.Name = " Gravity"
+Gravity.Parent = Frame_2
+Gravity.BackgroundColor3 = Color3.new(0.172549, 0.172549, 0.172549)
+Gravity.BorderSizePixel = 0
+Gravity.Position = UDim2.new(0.0523809567, 0, 0.864398062, 0)
+Gravity.Size = UDim2.new(0, 190, 0, 30)
+Gravity.Font = Enum.Font.SourceSans
+Gravity.PlaceholderColor3 = Color3.new(0, 0, 0)
+Gravity.PlaceholderText = "Type Gravity"
+Gravity.Text = ""
+Gravity.TextColor3 = Color3.new(0, 0, 0)
+Gravity.TextScaled = true
+Gravity.TextSize = 14
+Gravity.TextWrapped = true
+
+AutoFarm.Name = "AutoFarm"
+AutoFarm.Parent = Frame_2
+AutoFarm.BackgroundColor3 = Color3.new(0.172549, 0.172549, 0.172549)
+AutoFarm.BorderSizePixel = 0
+AutoFarm.Position = UDim2.new(0.0519523844, 0, 0.403123021, 0)
+AutoFarm.Size = UDim2.new(0, 190, 0, 30)
+AutoFarm.Modal = true
+AutoFarm.Font = Enum.Font.SourceSans
+AutoFarm.Text = "Auto Farm"
+AutoFarm.TextColor3 = Color3.new(0.470588, 0.470588, 0.470588)
+AutoFarm.TextScaled = true
+AutoFarm.TextSize = 14
+AutoFarm.TextWrapped = true
+
+Background_2.Name = "Background"
+Background_2.Parent = Scripts
+Background_2.Active = true
+Background_2.BackgroundColor3 = Color3.new(0.188235, 0.188235, 0.188235)
+Background_2.BackgroundTransparency = 1
+Background_2.Position = UDim2.new(-0.0560197048, 0, -0.220000163, 0)
+Background_2.Size = UDim2.new(0, 195, 0, 52)
+Background_2.Image = "rbxassetid://3570695787"
+Background_2.ImageColor3 = Color3.new(0.176471, 0.176471, 0.176471)
+Background_2.ScaleType = Enum.ScaleType.Slice
+Background_2.SliceCenter = Rect.new(100, 100, 100, 100)
+
+TextButton_2.Parent = Scripts
+TextButton_2.BackgroundColor3 = Color3.new(1, 1, 1)
+TextButton_2.BackgroundTransparency = 1
+TextButton_2.Position = UDim2.new(-0.0560197048, 0, -0.220000163, 0)
+TextButton_2.Size = UDim2.new(0, 195, 0, 53)
+TextButton_2.ZIndex = 2
+TextButton_2.Font = Enum.Font.SourceSans
+TextButton_2.Text = " "
+TextButton_2.TextColor3 = Color3.new(0, 0, 0)
+TextButton_2.TextScaled = true
+TextButton_2.TextSize = 14
+TextButton_2.TextWrapped = true
+
+Tps.Name = "Tps"
+Tps.Parent = Frame
+Tps.Active = true
+Tps.BackgroundColor3 = Color3.new(0.172549, 0.172549, 0.172549)
+Tps.BackgroundTransparency = 1
+Tps.BorderColor3 = Color3.new(0, 0, 0)
+Tps.BorderSizePixel = 0
+Tps.Position = UDim2.new(0.0239933357, 0, 0.467977405, 0)
+Tps.Selectable = true
+Tps.Size = UDim2.new(0, 195, 0, 50)
+Tps.ZIndex = 2
+Tps.Font = Enum.Font.SourceSans
+Tps.Text = "Tps"
+Tps.TextColor3 = Color3.new(0, 0, 0)
+Tps.TextScaled = true
+Tps.TextSize = 14
+Tps.TextWrapped = true
+
+Frame_3.Parent = Tps
+Frame_3.Active = true
+Frame_3.BackgroundColor3 = Color3.new(0, 0, 0)
+Frame_3.BorderSizePixel = 0
+Frame_3.Position = UDim2.new(1, 0, -2.67691278, 0)
+Frame_3.Selectable = true
+Frame_3.Size = UDim2.new(0, 205, 0, 292)
+Frame_3.Visible = false
+
+CrownShop.Name = "CrownShop"
+CrownShop.Parent = Frame_3
+CrownShop.BackgroundColor3 = Color3.new(0.172549, 0.172549, 0.172549)
+CrownShop.BorderSizePixel = 0
+CrownShop.Position = UDim2.new(0.0471904799, 0, 0.439397544, 0)
+CrownShop.Size = UDim2.new(0, 190, 0, 30)
+CrownShop.Font = Enum.Font.SourceSans
+CrownShop.Text = "Crown Shop"
+CrownShop.TextColor3 = Color3.new(0.470588, 0.470588, 0.470588)
+CrownShop.TextScaled = true
+CrownShop.TextSize = 14
+CrownShop.TextWrapped = true
+
+Reward.Name = "Reward"
+Reward.Parent = Frame_3
+Reward.BackgroundColor3 = Color3.new(0.172549, 0.172549, 0.172549)
+Reward.BorderSizePixel = 0
+Reward.Position = UDim2.new(0.0476190522, 0, 0.0645319819, 0)
+Reward.Size = UDim2.new(0, 190, 0, 30)
+Reward.Font = Enum.Font.SourceSans
+Reward.Text = "Daily Reward"
+Reward.TextColor3 = Color3.new(0.470588, 0.470588, 0.470588)
+Reward.TextScaled = true
+Reward.TextSize = 14
+Reward.TextWrapped = true
+
+Sell.Name = "Sell"
+Sell.Parent = Frame_3
+Sell.BackgroundColor3 = Color3.new(0.172549, 0.172549, 0.172549)
+Sell.BorderSizePixel = 0
+Sell.Position = UDim2.new(0.0471904799, 0, 0.800254703, 0)
+Sell.Size = UDim2.new(0, 190, 0, 30)
+Sell.Font = Enum.Font.SourceSans
+Sell.Text = "Sell"
+Sell.TextColor3 = Color3.new(0.470588, 0.470588, 0.470588)
+Sell.TextScaled = true
+Sell.TextSize = 14
+Sell.TextWrapped = true
+
+Shop.Name = "Shop"
+Shop.Parent = Frame_3
+Shop.BackgroundColor3 = Color3.new(0.172549, 0.172549, 0.172549)
+Shop.BorderSizePixel = 0
+Shop.Position = UDim2.new(0.0476190522, 0, 0.2431034, 0)
+Shop.Size = UDim2.new(0, 190, 0, 30)
+Shop.Font = Enum.Font.SourceSans
+Shop.Text = "Shop"
+Shop.TextColor3 = Color3.new(0.470588, 0.470588, 0.470588)
+Shop.TextScaled = true
+Shop.TextSize = 14
+Shop.TextWrapped = true
+
+Spawns.Name = "Spawns"
+Spawns.Parent = Frame_3
+Spawns.BackgroundColor3 = Color3.new(0.172549, 0.172549, 0.172549)
+Spawns.BorderSizePixel = 0
+Spawns.Position = UDim2.new(0.0471904799, 0, 0.625254691, 0)
+Spawns.Size = UDim2.new(0, 190, 0, 30)
+Spawns.Font = Enum.Font.SourceSans
+Spawns.Text = "First Spawns"
+Spawns.TextColor3 = Color3.new(0.470588, 0.470588, 0.470588)
+Spawns.TextScaled = true
+Spawns.TextSize = 14
+Spawns.TextWrapped = true
+
+Background_3.Name = "Background"
+Background_3.Parent = Tps
+Background_3.Active = true
+Background_3.BackgroundColor3 = Color3.new(0.188235, 0.188235, 0.188235)
+Background_3.BackgroundTransparency = 1
+Background_3.Position = UDim2.new(-0.0410000011, 0, 0, 0)
+Background_3.Size = UDim2.new(0, 198, 0, 52)
+Background_3.Image = "rbxassetid://3570695787"
+Background_3.ImageColor3 = Color3.new(0.176471, 0.176471, 0.176471)
+Background_3.ScaleType = Enum.ScaleType.Slice
+Background_3.SliceCenter = Rect.new(100, 100, 100, 100)
+
+TextButton_3.Parent = Tps
+TextButton_3.BackgroundColor3 = Color3.new(1, 1, 1)
+TextButton_3.BackgroundTransparency = 1
+TextButton_3.Position = UDim2.new(-0.0541388094, 0, 0, 0)
+TextButton_3.Size = UDim2.new(0, 200, 0, 51)
+TextButton_3.ZIndex = 2
+TextButton_3.Font = Enum.Font.SourceSans
+TextButton_3.Text = " "
+TextButton_3.TextColor3 = Color3.new(0, 0, 0)
+TextButton_3.TextScaled = true
+TextButton_3.TextSize = 14
+TextButton_3.TextWrapped = true
+
+-- Scripts:
+
+local function EPIBUO_fake_script() -- Frame.LocalScript 
+	local script = Instance.new('LocalScript', Frame)
+
+	script.Parent.Draggable = true
+end
+coroutine.wrap(EPIBUO_fake_script)()
+local function ARUTMQN_fake_script() -- TextButton.LocalScript 
+	local script = Instance.new('LocalScript', TextButton)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		local message = Instance.new("Message")
+		message.Parent = game.Workspace
+		message.Text = "Script Made By TheAmazingShow"
+		wait(2)
+		message:Destroy()
+		local message2 = Instance.new("Message")
+		message2.Parent = game.Workspace
+		message2.Text = "Subscribe to TheAmazingShow :)"
+		wait(2)
+		message2:Destroy()
+	end)
+end
+coroutine.wrap(ARUTMQN_fake_script)()
+local function UTFJJE_fake_script() -- AutoKing.LocalScript 
+	local script = Instance.new('LocalScript', AutoKing)
+
+	script.Parent.MouseButton1Click:Connect(function()	
+		local plr = game.Players.LocalPlayer.Character
+		workspace.Locations.KingArea.CanCollide = false
+		game.Workspace.Gravity = 1
+		while true do
+			wait()
+			plr.HumanoidRootPart.CFrame = CFrame.new(workspace.Locations.KingArea.CFrame.Position + Vector3.new(0,9.5,0))
+		end
+	end)
+end
+coroutine.wrap(UTFJJE_fake_script)()
+local function WLJTNG_fake_script() -- BossKiller.LocalScript 
+	local script = Instance.new('LocalScript', BossKiller)
+
+	script.Parent.MouseButton1Click:Connect(function()	
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(workspace.Boss.Head.CFrame.Position + Vector3.new(0,0,0))
+		game.Workspace.Gravity = 1
+		local platform = Instance.new("Part",workspace)
+		platform.Name = "platform"
+		platform.Position = Vector3.new(100,100,100)
+		platform.Anchored = true
+		platform.CanCollide = true
+		local val = Instance.new("IntValue",game.Players.LocalPlayer.Character.HumanoidRootPart)
+		val.Value = 0
+		local on = true
+	while true do
+		wait(0.1)
+		if on then
+			repeat
+				wait()
+				workspace.Boss.Health.Value = 0
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(workspace.Boss.Head.CFrame.Position + Vector3.new(0,3,0))
+				val.Value = val.Value +1
+			until val.Value == 160
+				on = false
+				val.Value = 0
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(platform.CFrame.Position)
+				wait(3)
+				on = true
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(workspace.Boss.Head.CFrame.Position + Vector3.new(0,3,0))
+			else
+				print("no")
+			end
+		end
+	end)
+end
+coroutine.wrap(WLJTNG_fake_script)()
+local function ANZRY_fake_script() -- CoinGrabber.LocalScript 
+	local script = Instance.new('LocalScript', CoinGrabber)
+
+	script.Parent.MouseButton1Click:Connect(function()	
+		local plr = game.Players.LocalPlayer.Character
+		while true do
+			wait()
+			plr.HumanoidRootPart.CFrame = CFrame.new(workspace.CoinsHolder:FindFirstChild("Coin").CFrame.Position)
+			wait(0.15)
+			workspace.CoinsHolder:FindFirstChild("Coin"):Destroy()
+			plr.HumanoidRootPart.CFrame = CFrame.new(workspace.CandyHolder:FindFirstChild("Candy").CFrame.Position)
+			wait(0.15)
+			workspace.CandyHolder:FindFirstChild("Candy"):Destroy()
+		end
+	end)
+end
+coroutine.wrap(ANZRY_fake_script)()
+local function JFLEHG_fake_script() -- Walkspeed.LocalScript 
+	local script = Instance.new('LocalScript', Walkspeed)
+
+	local plr = game.Players.LocalPlayer.Character
+	plr:WaitForChild("Humanoid")
+	local text = script.Parent
+	text:GetPropertyChangedSignal("Text"):Connect(function()
+		game:GetService("RunService").Stepped:Connect(function()
+			plr.Humanoid.WalkSpeed = text.Text
+		end)
+	end)
+end
+coroutine.wrap(JFLEHG_fake_script)()
+local function LLAVYRQ_fake_script() -- JumpPower.LocalScript 
+	local script = Instance.new('LocalScript', JumpPower)
+
+	local plr = game.Players.LocalPlayer.Character
+	plr:WaitForChild("Humanoid")
+	local text = script.Parent
+	text:GetPropertyChangedSignal("Text"):Connect(function()
+		plr.Humanoid.JumpPower = text.Text
+	end)
+end
+coroutine.wrap(LLAVYRQ_fake_script)()
+local function DQYCE_fake_script() -- Gravity.LocalScript 
+	local script = Instance.new('LocalScript', Gravity)
+
+	local text = script.Parent
+	text:GetPropertyChangedSignal("Text"):Connect(function()
+		workspace.Gravity = text.Text
+	end)
+end
+coroutine.wrap(DQYCE_fake_script)()
+local function RKPR_fake_script() -- AutoFarm.LocalScript 
+	local script = Instance.new('LocalScript', AutoFarm)
+
+	local plr = game.Players.LocalPlayer
+	local safeplace = Instance.new("Part", workspace)
+	safeplace.Anchored = true
+	safeplace.Position = Vector3.new(200,200,200)
+	safeplace.CanCollide = true
+	safeplace.BottomSurface = "Smooth"
+	safeplace.TopSurface = "Smooth"
+	safeplace.Name = "Safeplace"
+	safeplace.Size = Vector3.new(100,1,100)
+	script.Parent.MouseButton1Click:Connect(function()
+	plr.Character.HumanoidRootPart.CFrame = CFrame.new(safeplace.CFrame.Position + Vector3.new(0,2,0))	
+		while wait() do
+			local Remote = game.ReplicatedStorage.Events['Clicked']
+			local Arguments = {}
+			Remote:FireServer(unpack(Arguments))
+			local Event = game:GetService("ReplicatedStorage").Events.Sell
+			Event:FireServer()
+		end
+	end)
+end
+coroutine.wrap(RKPR_fake_script)()
+local function DSFU_fake_script() -- TextButton_2.LocalScript 
+	local script = Instance.new('LocalScript', TextButton_2)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Frame.Visible = true
+		script.Parent.Parent.Parent.Tps.Frame.Visible = false
+	end)
+end
+coroutine.wrap(DSFU_fake_script)()
+local function DKVEONB_fake_script() -- CrownShop.LocalScript 
+	local script = Instance.new('LocalScript', CrownShop)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(workspace.Locations.CrownShop.CFrame.Position + Vector3.new(0,4,0))
+	end)
+end
+coroutine.wrap(DKVEONB_fake_script)()
+local function UJTTUV_fake_script() -- Reward.LocalScript 
+	local script = Instance.new('LocalScript', Reward)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(workspace.DailyReward.Location.CFrame.Position + Vector3.new(0,4,0))
+	end)
+end
+coroutine.wrap(UJTTUV_fake_script)()
+local function HMWEF_fake_script() -- Sell.LocalScript 
+	local script = Instance.new('LocalScript', Sell)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(workspace.Locations.Sell.CFrame.Position + Vector3.new(0,4,0))
+	end)
+end
+coroutine.wrap(HMWEF_fake_script)()
+local function MQMTB_fake_script() -- Shop.LocalScript 
+	local script = Instance.new('LocalScript', Shop)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(workspace.Locations.Shop.CFrame.Position + Vector3.new(0,4,0))
+	end)
+end
+coroutine.wrap(MQMTB_fake_script)()
+local function HCXX_fake_script() -- Spawns.LocalScript 
+	local script = Instance.new('LocalScript', Spawns)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(workspace.Locations.FirstSpawns:FindFirstChild("FirstSpawn").CFrame.Position + Vector3.new(0,4,0))
+	end)
+end
+coroutine.wrap(HCXX_fake_script)()
+local function ZYKZ_fake_script() -- TextButton_3.LocalScript 
+	local script = Instance.new('LocalScript', TextButton_3)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Frame.Visible = false
+		script.Parent.Parent.Parent.Tps.Frame.Visible = true
+	end)
+end
+coroutine.wrap(ZYKZ_fake_script)()
